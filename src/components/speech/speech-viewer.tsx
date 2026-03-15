@@ -227,7 +227,9 @@ export function SpeechViewer({
             </p>
           )}
           {translationError && (
-            <p className="mt-3 text-xs text-red-600">{translationError}</p>
+            <p className="mt-3 text-xs text-red-600">
+              Translation is currently in beta. Please try again later.
+            </p>
           )}
         </div>
       )}
