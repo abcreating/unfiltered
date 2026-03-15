@@ -1,0 +1,81 @@
+import type { Metadata } from "next";
+import prisma from "@/lib/prisma";
+
+export const dynamic = "force-dynamic";
+import { Header } from "@/components/layout/header";
+import { Footer } from "@/components/layout/footer";
+import { SpeechListFilter } from "@/components/speech/speech-list-filter";
+
+export const metadata: Metadata = {
+  title: "Speech Archive | Unfiltered",
+  description:
+    "Browse the full archive of world leader speeches. Full transcripts, no editorial spin.",
+};
+
+async function getPublishedSpeeches() {
+  const speeches = await prisma.speech.findMany({
+    where: { status: "PUBLISHED" },
+    include: {
+      leader: {
+        select: {
+          slug: true,
+          name: true,
+        },
+      },
+      tags: {
+        include: {
+          tag: {
+            select: {
+              slug: true,
+              name: true,
+            },
+          },
+        },
+      },
+    },
+    orderBy: { deliveredAt: "desc" },
+  });
+
+  return speeches;
+}
+
+export default async function SpeechesPage() {
+  const speeches = await getPublishedSpeeches();
+
+  const serialized = speeches.map((speech) => ({
+    slug: speech.slug,
+    title: speech.title,
+    deliveredAt: speech.deliveredAt.toISOString(),
+    occasion: speech.occasion,
+    originalLang: speech.originalLang,
+    leader: {
+      name: speech.leader.name,
+      slug: speech.leader.slug,
+    },
+    tags: speech.tags.map((st) => ({
+      slug: st.tag.slug,
+      name: st.tag.name,
+    })),
+  }));
+
+  return (
+    <>
+      <Header />
+
+      <main className="flex-1">
+        <section className="max-w-3xl mx-auto px-6 pt-16 pb-20">
+          <h1 className="heading-serif text-3xl sm:text-4xl text-foreground mb-2">
+            Speech Archive
+          </h1>
+          <p className="text-sm text-muted-foreground mb-10">
+            Full transcripts of speeches by world leaders, sorted by date.
+          </p>
+
+          <SpeechListFilter speeches={serialized} />
+        </section>
+      </main>
+
+      <Footer />
+    </>
+  );
+}

@@ -1,0 +1,21 @@
+[
+  {"slug": "economics", "name": "Economics", "category": "TOPIC"},
+  {"slug": "defense", "name": "Defense", "category": "TOPIC"},
+  {"slug": "climate", "name": "Climate", "category": "TOPIC"},
+  {"slug": "trade", "name": "Trade", "category": "TOPIC"},
+  {"slug": "diplomacy", "name": "Diplomacy", "category": "TOPIC"},
+  {"slug": "elections", "name": "Elections", "category": "TOPIC"},
+  {"slug": "ai-tech", "name": "AI/Tech", "category": "TOPIC"},
+  {"slug": "health", "name": "Health", "category": "TOPIC"},
+  {"slug": "human-rights", "name": "Human Rights", "category": "TOPIC"},
+  {"slug": "energy", "name": "Energy", "category": "TOPIC"},
+  {"slug": "un-general-assembly", "name": "UN General Assembly", "category": "EVENT"},
+  {"slug": "g7-summit", "name": "G7 Summit", "category": "EVENT"},
+  {"slug": "g20-summit", "name": "G20 Summit", "category": "EVENT"},
+  {"slug": "davos-wef", "name": "World Economic Forum (Davos)", "category": "EVENT"},
+  {"slug": "inauguration", "name": "Inauguration", "category": "EVENT"},
+  {"slug": "cop-climate", "name": "COP Climate Conference", "category": "EVENT"},
+  {"slug": "address", "name": "Address", "category": "FORMAT"},
+  {"slug": "press-conference", "name": "Press Conference", "category": "FORMAT"},
+  {"slug": "policy-speech", "name": "Policy Speech", "category": "FORMAT"}
+]

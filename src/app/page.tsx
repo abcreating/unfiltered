@@ -1,101 +1,108 @@
-import Image from "next/image";
+import Link from "next/link";
+import { Header } from "@/components/layout/header";
+import { Footer } from "@/components/layout/footer";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    <>
+      <Header />
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
+      <main className="flex-1">
+        {/* Hero */}
+        <section className="max-w-5xl mx-auto px-6 pt-24 pb-16">
+          <h1 className="heading-serif text-6xl sm:text-7xl lg:text-8xl text-foreground mb-4">
+            Unfiltered
+          </h1>
+          <p className="heading-serif text-2xl sm:text-3xl text-muted-foreground mb-10">
+            What leaders actually said.
+          </p>
+          <p className="text-base leading-[1.8] text-foreground/80 max-w-xl">
+            No editorial spin. No summaries. Full transcripts of speeches by
+            world leaders, in any language, with zero framing.
+          </p>
+
+          <div className="flex items-center gap-4 mt-10">
+            <Link
+              href="/speeches"
+              className="inline-flex items-center justify-center px-6 py-3 text-sm font-medium bg-foreground text-background rounded hover:opacity-90 transition-opacity"
+            >
+              Browse Speeches
+            </Link>
+            <Link
+              href="/find"
+              className="inline-flex items-center justify-center px-6 py-3 text-sm font-medium border border-border rounded text-foreground hover:bg-secondary transition-colors"
+            >
+              Find the Clip
+            </Link>
+          </div>
+        </section>
+
+        <div className="rule-stone max-w-5xl mx-auto" />
+
+        {/* Recent speeches */}
+        <section className="max-w-5xl mx-auto px-6 py-16">
+          <h2 className="heading-serif text-2xl text-foreground mb-8">
+            Recent Speeches
+          </h2>
+
+          <div className="grid gap-6">
+            {/* Placeholder cards */}
+            {[
+              {
+                title: "Address to the UN General Assembly",
+                speaker: "Speaker Name",
+                date: "March 2026",
+                language: "English",
+              },
+              {
+                title: "State of the Nation Address",
+                speaker: "Speaker Name",
+                date: "February 2026",
+                language: "English",
+              },
+              {
+                title: "Remarks on Climate Policy",
+                speaker: "Speaker Name",
+                date: "January 2026",
+                language: "French",
+              },
+            ].map((speech) => (
+              <article
+                key={speech.title}
+                className="group flex items-baseline justify-between py-4 border-b border-border/50 last:border-b-0"
+              >
+                <div className="min-w-0">
+                  <h3 className="text-base font-medium text-foreground group-hover:text-[#d97706] transition-colors">
+                    {speech.title}
+                  </h3>
+                  <p className="text-sm text-muted-foreground mt-1">
+                    {speech.speaker}
+                  </p>
+                </div>
+                <div className="flex items-center gap-4 ml-8 shrink-0">
+                  <span className="text-xs text-muted-foreground/60 uppercase tracking-wide">
+                    {speech.language}
+                  </span>
+                  <span className="text-sm text-muted-foreground tabular-nums">
+                    {speech.date}
+                  </span>
+                </div>
+              </article>
+            ))}
+          </div>
+
+          <div className="mt-8">
+            <Link
+              href="/speeches"
+              className="text-sm link-accent"
+            >
+              View all speeches &rarr;
+            </Link>
+          </div>
+        </section>
       </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+
+      <Footer />
+    </>
   );
 }

@@ -1,0 +1,115 @@
+{
+  "leaderSlug": "andrew-bailey",
+  "slug": "bailey-mansion-house-2023",
+  "title": "Mansion House Speech 2023",
+  "titleOriginal": null,
+  "originalLang": "en",
+  "deliveredAt": "2023-07-10T19:30:00Z",
+  "venue": "Mansion House",
+  "city": "London",
+  "country": "United Kingdom",
+  "countryCode": "GB",
+  "occasion": "Annual Mansion House Dinner",
+  "videoUrl": null,
+  "videoSource": null,
+  "sourceUrl": "https://www.bankofengland.co.uk/speech/2023/july/andrew-bailey-mansion-house-2023",
+  "sourceLabel": "Bank of England",
+  "tags": ["economics", "ai-tech", "policy-speech"],
+  "paragraphs": [
+    {
+      "index": 0,
+      "text": "My Lord Mayor, Chancellor, distinguished guests. Thank you for the invitation to speak this evening. The Mansion House dinner is always an occasion to reflect on the state of the economy and the financial system, and this year there is no shortage of subjects warranting our attention. I want to cover three areas tonight: the inflation outlook, financial stability, and the future of money and markets.",
+      "startTime": null
+    },
+    {
+      "index": 1,
+      "text": "Let me begin with inflation, which remains the most pressing challenge facing the Monetary Policy Committee. CPI inflation has fallen from its peak of eleven point one percent last October, and the latest reading shows continued decline. But at its current level, inflation remains far too high. The MPC is committed to returning inflation to the two percent target, and we will set monetary policy accordingly.",
+      "startTime": null
+    },
+    {
+      "index": 2,
+      "text": "The dynamics of inflation have shifted over the past year. The initial surge was driven overwhelmingly by external factors — energy prices, global supply chain disruptions, and food commodity costs. These pressures are now easing. But what concerns the MPC is the persistence of domestically generated inflation, particularly in services prices and wage growth. Services inflation has remained stubbornly elevated, and we are watching it very carefully.",
+      "startTime": null
+    },
+    {
+      "index": 3,
+      "text": "The UK labour market, while showing some early signs of loosening, remains tight by historical standards. Unemployment is low, vacancies are elevated, and wage growth — while understandable given the cost-of-living pressures faced by workers — is running at levels that are inconsistent with the inflation target if sustained. I want to be clear: the Bank does not target wages. But wage dynamics are an important input into our assessment of the inflation outlook.",
+      "startTime": null
+    },
+    {
+      "index": 4,
+      "text": "The MPC will continue to adjust Bank Rate as necessary to ensure that inflation returns to target in a sustainable manner. We are not on a pre-set path. Each decision will reflect the latest evidence on inflation persistence, the labour market, and the broader economy. I recognize that higher interest rates are painful for many households and businesses, particularly those with variable-rate mortgages or those refinancing fixed-rate deals. But the cost of allowing inflation to become embedded would be far greater.",
+      "startTime": null
+    },
+    {
+      "index": 5,
+      "text": "Turning to financial stability, I want to address the events in the banking sector earlier this year. The failures of Silicon Valley Bank and Signature Bank in the United States, and the forced merger of Credit Suisse with UBS in Switzerland, were a stark reminder that risks in the financial system can crystallize rapidly and with limited warning. These events tested the resilience of the global banking system.",
+      "startTime": null
+    },
+    {
+      "index": 6,
+      "text": "I am pleased to report that the UK banking system has weathered these stresses well. British banks are significantly better capitalised than they were before the global financial crisis, with common equity tier one ratios more than three times their pre-crisis levels. Our stress testing framework, which subjects banks to severe but plausible scenarios, has confirmed that the major UK banks have the resilience to continue lending even in a sharp economic downturn.",
+      "startTime": null
+    },
+    {
+      "index": 7,
+      "text": "But we must not be complacent. The failures in the US and Switzerland have highlighted risks associated with uninsured deposits, interest rate risk in banking books, and the speed at which social media can accelerate bank runs. The Financial Policy Committee is reviewing the lessons from these episodes and will consider whether any adjustments to our regulatory framework are warranted.",
+      "startTime": null
+    },
+    {
+      "index": 8,
+      "text": "The non-bank financial sector — or as it is sometimes called, market-based finance — deserves particular attention. The liability-driven investment crisis in the autumn of last year demonstrated how vulnerabilities in non-bank entities can generate systemic stress and require central bank intervention. We are working internationally through the Financial Stability Board to develop a more robust regulatory and supervisory framework for non-bank financial intermediation.",
+      "startTime": null
+    },
+    {
+      "index": 9,
+      "text": "Now let me turn to a subject that I believe will define the next chapter of central banking and financial regulation: digital money and the future of the financial system. The Bank of England, together with HM Treasury, has been undertaking detailed design work on a potential digital pound — a central bank digital currency for retail use.",
+      "startTime": null
+    },
+    {
+      "index": 10,
+      "text": "Let me explain why we believe this work is important. Cash use has been declining for years, and while the Bank is committed to ensuring that cash remains available for those who want it, we must also plan for a future in which digital payments become the norm. A digital pound would provide a public sector anchor for the monetary system in a digital world — ensuring that the public always has access to central bank money, just as they do today through banknotes.",
+      "startTime": null
+    },
+    {
+      "index": 11,
+      "text": "I want to be clear about what the digital pound would not be. It would not replace cash. It would not allow the Bank of England to monitor individual transactions. It would not pay interest or be used as a tool of monetary policy. Privacy protections would be built in from the design stage, not bolted on as an afterthought. We are consulting extensively with the public and with industry, because the decision to introduce a digital pound must command broad confidence.",
+      "startTime": null
+    },
+    {
+      "index": 12,
+      "text": "The rapid development of artificial intelligence is another technological shift that demands our attention. AI is already being deployed across financial services — in credit scoring, fraud detection, algorithmic trading, and customer service. The potential for efficiency gains is enormous, but so are the risks. We need to understand how AI models make decisions, how they might amplify existing biases, and how they could affect market dynamics during stress periods.",
+      "startTime": null
+    },
+    {
+      "index": 13,
+      "text": "The Bank is establishing an internal programme to assess the implications of AI for monetary policy, financial stability, and prudential supervision. We are also engaging with firms to understand their adoption plans and governance frameworks. Regulation must be proportionate and technology-neutral, but it must also ensure that the use of AI in financial services does not create new systemic vulnerabilities.",
+      "startTime": null
+    },
+    {
+      "index": 14,
+      "text": "On capital markets reform, I welcome the Edinburgh Reforms and the ongoing work to make the UK a more attractive destination for listing, investment, and innovation. The Bank is playing its part by reviewing our approach to insurance regulation under Solvency UK, which will unlock productive investment by the insurance sector. We are also working to ensure that our clearing and settlement infrastructure remains world-class as markets evolve.",
+      "startTime": null
+    },
+    {
+      "index": 15,
+      "text": "The competitiveness of the City of London is a matter of national importance, and the Bank takes seriously its new secondary objective to facilitate the competitiveness and growth of the UK economy. But I want to be equally clear that we will not pursue competitiveness by lowering prudential standards. The foundation of London's success as a financial centre is trust — trust in the safety of our institutions, the integrity of our markets, and the quality of our regulation.",
+      "startTime": null
+    },
+    {
+      "index": 16,
+      "text": "Sustainable finance continues to grow in importance, and the Bank is supporting the transition to a net-zero economy through our climate-related supervisory activities. We expect regulated firms to manage climate-related financial risks effectively, and our climate scenario analysis has helped firms understand the potential impact of different transition pathways on their balance sheets. The Task Force on Climate-related Financial Disclosures framework is now embedded in our expectations.",
+      "startTime": null
+    },
+    {
+      "index": 17,
+      "text": "Let me conclude by returning to the broader economic picture. The UK economy has shown resilience in the face of significant headwinds. Growth has been modest but positive, the labour market remains robust, and inflation is on a downward trajectory, albeit too slowly. The path back to price stability will require continued vigilance and, in all likelihood, further adjustments to monetary policy.",
+      "startTime": null
+    },
+    {
+      "index": 18,
+      "text": "The Bank of England will do what is necessary to return inflation to the two percent target. We will maintain the stability of the financial system. And we will adapt our tools and our thinking to ensure that we remain effective in a rapidly changing world. The challenges are real, but so is our determination to meet them. My Lord Mayor, Chancellor, ladies and gentlemen, thank you.",
+      "startTime": null
+    }
+  ]
+}

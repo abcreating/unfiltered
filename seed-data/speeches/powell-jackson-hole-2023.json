@@ -1,0 +1,100 @@
+{
+  "leaderSlug": "jerome-powell",
+  "slug": "powell-jackson-hole-2023",
+  "title": "Inflation: Progress and the Path Ahead",
+  "titleOriginal": null,
+  "originalLang": "en",
+  "deliveredAt": "2023-08-25T10:00:00Z",
+  "venue": "Jackson Lake Lodge",
+  "city": "Jackson Hole, Wyoming",
+  "country": "United States",
+  "countryCode": "US",
+  "occasion": "Federal Reserve Bank of Kansas City Economic Symposium",
+  "videoUrl": "https://www.youtube.com/watch?v=PaXKXvFeXHk",
+  "videoSource": "youtube",
+  "sourceUrl": "https://www.federalreserve.gov/newsevents/speech/powell20230825a.htm",
+  "sourceLabel": "Board of Governors of the Federal Reserve System",
+  "tags": ["economics", "policy-speech"],
+  "paragraphs": [
+    {
+      "index": 0,
+      "text": "Good morning. At last year's Jackson Hole symposium, I delivered a brief, direct message. The substance of that message was that restoring price stability would require holding a restrictive policy stance for an extended period. Today, my message is the same in spirit but reflects the progress we have made and the uncertainties we face going forward.",
+      "startTime": 0
+    },
+    {
+      "index": 1,
+      "text": "The Federal Open Market Committee has raised the policy rate by 525 basis points since early 2022. This represents the most rapid tightening cycle in four decades. We have done so to bring inflation back toward our two percent target. The question before us now is whether the stance of policy is sufficiently restrictive, and how long we must maintain that stance.",
+      "startTime": 40
+    },
+    {
+      "index": 2,
+      "text": "Let me begin with inflation. The decline from the peaks we saw in mid-2022 has been meaningful. Twelve-month PCE inflation peaked at 7.1 percent in June 2022 and has fallen to 3.3 percent as of July. Core PCE inflation, which excludes food and energy, peaked at 5.4 percent in February 2022 and has come down to 4.2 percent. These are welcome developments, but inflation remains too high.",
+      "startTime": 80
+    },
+    {
+      "index": 3,
+      "text": "I want to discuss the components of inflation to give a clearer picture of where we are and where we may be heading. It is useful to think of core PCE inflation in three categories: goods inflation, housing services inflation, and non-housing services inflation. Each has its own dynamics and trajectory. Understanding these components is essential for assessing the overall outlook.",
+      "startTime": 130
+    },
+    {
+      "index": 4,
+      "text": "Goods inflation has fallen sharply. After running well above its pre-pandemic level for much of 2021 and 2022, goods inflation has returned closer to its pre-pandemic trend. Supply chain disruptions have largely resolved. Vehicle prices, which were a major driver of goods inflation, have moderated. We expect goods inflation to continue to exert downward pressure on overall inflation in the coming months.",
+      "startTime": 175
+    },
+    {
+      "index": 5,
+      "text": "Housing services inflation remains elevated. The dynamic here is well understood. When market rents rise, they feed through to measured inflation with a considerable lag, because the CPI and PCE measures include all rents, not just new leases. Market rents have been growing at a much lower pace for over a year now. This deceleration will show up in the official data in the coming quarters.",
+      "startTime": 220
+    },
+    {
+      "index": 6,
+      "text": "The third category, non-housing services, represents over half of the core PCE index and includes a broad range of services from health care and transportation to food services and accommodations. This is the category that may prove most persistent. Wages are a significant input to these services, and the labor market, while rebalancing, remains tight by historical standards.",
+      "startTime": 270
+    },
+    {
+      "index": 7,
+      "text": "Let me turn to the labor market. The labor market has come into better balance over the past year. Job openings have declined by roughly 3 million from their March 2022 peak. The ratio of vacancies to unemployed workers, which at one point reached 2 to 1, has fallen significantly. Quits rates have returned to near pre-pandemic levels. These are signs of a labor market that is normalizing.",
+      "startTime": 320
+    },
+    {
+      "index": 8,
+      "text": "Wage growth has also moderated. Several measures of nominal wage growth have been moving down, though they remain above levels that would be consistent with 2 percent inflation over time, given current estimates of trend productivity growth. We will need to see continued moderation in wage growth to be confident that inflation is on a sustainable path back to 2 percent.",
+      "startTime": 370
+    },
+    {
+      "index": 9,
+      "text": "Importantly, the rebalancing of the labor market has not come through a significant rise in unemployment. The unemployment rate, at 3.5 percent, remains near historic lows. This is encouraging. It suggests that it may be possible to bring inflation down without the kind of sharp increase in unemployment that has often accompanied disinflation episodes in the past.",
+      "startTime": 415
+    },
+    {
+      "index": 10,
+      "text": "Economic growth has been surprisingly resilient. Consumer spending has remained robust, supported by a strong labor market and healthy household balance sheets. GDP growth in the second quarter exceeded expectations. While tighter financial conditions would normally be expected to slow growth, the lags in monetary policy transmission are long and variable, as Milton Friedman famously observed.",
+      "startTime": 460
+    },
+    {
+      "index": 11,
+      "text": "Uncertainty about the path ahead is considerable. We cannot know with precision how long it will take for the full effects of our tightening to be felt. We cannot know with certainty the level of interest rates that is sufficiently restrictive. The neutral rate of interest is not directly observable and may have shifted. These uncertainties counsel caution as we navigate the path forward.",
+      "startTime": 505
+    },
+    {
+      "index": 12,
+      "text": "We are navigating by the stars under cloudy skies. The natural rate of interest, the natural rate of unemployment, the potential growth rate of the economy, these are concepts that guide our thinking but are estimated with considerable imprecision. We must be humble about what we know and what we do not know, and we must be prepared to adjust our approach as conditions evolve.",
+      "startTime": 550
+    },
+    {
+      "index": 13,
+      "text": "At our most recent meeting, we raised the federal funds rate to a range of 5.25 to 5.5 percent. Given the progress we have made, at upcoming meetings we are in a position to proceed carefully. We will assess incoming data and the evolving outlook. We will make decisions meeting by meeting. If economic conditions warrant further tightening, we will not hesitate to act.",
+      "startTime": 595
+    },
+    {
+      "index": 14,
+      "text": "Two percent is and will remain our inflation target. We are committed to achieving a stance of policy that is sufficiently restrictive to bring inflation sustainably down to that level, and we intend to hold policy at a restrictive level until we are confident that inflation is moving sustainably toward our target. Getting inflation sustainably back to 2 percent is expected to require a period of below-trend economic growth as well as some softening in labor market conditions.",
+      "startTime": 640
+    },
+    {
+      "index": 15,
+      "text": "In conclusion, we have come a long way in this tightening cycle. The progress on inflation is encouraging. But we have more work to do. The process of getting inflation sustainably back to 2 percent has a long way to go. We will stay the course until the job is done. Thank you.",
+      "startTime": 690
+    }
+  ]
+}
