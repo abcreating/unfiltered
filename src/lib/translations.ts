@@ -29,7 +29,7 @@ export const SUPPORTED_LANGUAGES = [
   { code: "ur", name: "Urdu" },
 ];
 
-async function translateText(text: string, sourceLang: string, targetLang: string): Promise<string> {
+async function translateChunk(text: string, sourceLang: string, targetLang: string): Promise<string> {
   const params = new URLSearchParams({
     q: text,
     langpair: `${sourceLang}|${targetLang}`,
@@ -55,6 +55,35 @@ async function translateText(text: string, sourceLang: string, targetLang: strin
   }
 
   return data.responseData.translatedText;
+}
+
+async function translateText(text: string, sourceLang: string, targetLang: string): Promise<string> {
+  if (text.length <= 450) {
+    return translateChunk(text, sourceLang, targetLang);
+  }
+
+  // Split into sentences, then group into chunks under 450 chars
+  const sentences = text.match(/[^.!?]+[.!?]+\s*/g) || [text];
+  const chunks: string[] = [];
+  let current = "";
+
+  for (const sentence of sentences) {
+    if (current.length + sentence.length > 450 && current.length > 0) {
+      chunks.push(current.trim());
+      current = sentence;
+    } else {
+      current += sentence;
+    }
+  }
+  if (current.trim()) {
+    chunks.push(current.trim());
+  }
+
+  const translated = await Promise.all(
+    chunks.map((chunk) => translateChunk(chunk, sourceLang, targetLang))
+  );
+
+  return translated.join(" ");
 }
 
 export async function translateSpeech(
