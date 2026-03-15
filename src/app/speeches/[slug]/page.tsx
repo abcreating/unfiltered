@@ -132,6 +132,7 @@ export default async function SpeechPage({ params }: SpeechPageProps) {
         />
 
         <SpeechViewer
+          speechId={speech.id}
           paragraphs={serializedParagraphs}
           videoEmbedId={speech.videoEmbedId}
           videoSource={speech.videoSource}
