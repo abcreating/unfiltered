@@ -28,6 +28,7 @@ export const SUPPORTED_LANGUAGES = [
   { code: "el", name: "Greek" },
   { code: "hu", name: "Hungarian" },
   { code: "sv", name: "Swedish" },
+  { code: "ur", name: "Urdu" },
 ];
 
 async function translateText(text: string, sourceLang: string, targetLang: string): Promise<string> {

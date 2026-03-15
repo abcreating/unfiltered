@@ -31,6 +31,7 @@ const LANGUAGES = [
   { code: "da", name: "Danish" },
   { code: "fi", name: "Finnish" },
   { code: "cs", name: "Czech" },
+  { code: "ur", name: "Urdu" },
 ];
 
 interface ParagraphData {

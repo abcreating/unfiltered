@@ -1,6 +1,4 @@
 import { NextRequest, NextResponse } from "next/server";
-import { getServerSession } from "next-auth";
-import { authOptions } from "@/lib/auth";
 import { translateSpeech, SUPPORTED_LANGUAGES } from "@/lib/translations";
 
 export async function POST(
@@ -8,15 +6,6 @@ export async function POST(
   { params }: { params: { id: string } }
 ) {
   try {
-    const session = await getServerSession(authOptions);
-
-    if (!session?.user?.email) {
-      return NextResponse.json(
-        { error: "Sign in to use translations" },
-        { status: 401 }
-      );
-    }
-
     const body = await request.json();
     const { lang } = body;
 
