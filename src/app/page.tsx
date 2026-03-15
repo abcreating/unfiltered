@@ -3,6 +3,7 @@ import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import prisma from "@/lib/prisma";
 import { format } from "date-fns";
+import { Search } from "lucide-react";
 
 export const dynamic = "force-dynamic";
 
@@ -15,6 +16,12 @@ export default async function Home() {
     orderBy: { deliveredAt: "desc" },
     take: 6,
   });
+
+  const totalSpeeches = await prisma.speech.count({
+    where: { status: "PUBLISHED" },
+  });
+
+  const totalLeaders = await prisma.leader.count();
 
   return (
     <>
@@ -30,22 +37,46 @@ export default async function Home() {
             What leaders actually said.
           </p>
           <p className="text-base leading-[1.8] text-foreground/80 max-w-xl">
-            No editorial spin. No summaries. Full transcripts of speeches by
-            world leaders, in any language, with zero framing.
+            Full transcripts of speeches by world leaders, in any language, with
+            zero editorial framing. {totalSpeeches} speeches from{" "}
+            {totalLeaders} leaders and counting.
           </p>
 
           <div className="flex items-center gap-4 mt-10">
             <Link
+              href="/find"
+              className="inline-flex items-center gap-2 justify-center px-6 py-3 text-sm font-medium bg-foreground text-background rounded hover:opacity-90 transition-opacity"
+            >
+              <Search className="size-4" />
+              Find the Clip
+            </Link>
+            <Link
               href="/speeches"
-              className="inline-flex items-center justify-center px-6 py-3 text-sm font-medium bg-foreground text-background rounded hover:opacity-90 transition-opacity"
+              className="inline-flex items-center justify-center px-6 py-3 text-sm font-medium border border-border rounded text-foreground hover:bg-secondary transition-colors"
             >
               Browse Speeches
             </Link>
+          </div>
+        </section>
+
+        <div className="rule-stone max-w-5xl mx-auto" />
+
+        {/* Find the Clip feature callout */}
+        <section className="max-w-5xl mx-auto px-6 py-16">
+          <div className="max-w-xl">
+            <h2 className="heading-serif text-2xl text-foreground mb-4">
+              See a quote on social media?
+            </h2>
+            <p className="text-base leading-[1.8] text-foreground/80 mb-6">
+              Paste it into Find the Clip. We&apos;ll locate the exact moment in
+              the full transcript and show you what was said before and after. No
+              commentary — just context.
+            </p>
             <Link
               href="/find"
-              className="inline-flex items-center justify-center px-6 py-3 text-sm font-medium border border-border rounded text-foreground hover:bg-secondary transition-colors"
+              className="text-sm link-accent"
             >
-              Find the Clip
+              Try it now &rarr;
             </Link>
           </div>
         </section>

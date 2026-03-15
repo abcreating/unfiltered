@@ -34,6 +34,7 @@ interface SpeechHeaderProps {
   sourceUrl: string;
   sourceLabel: string | null;
   tags: TagData[];
+  wordCount?: number;
 }
 
 function formatDuration(seconds: number): string {
@@ -64,6 +65,7 @@ export function SpeechHeader({
   sourceUrl,
   sourceLabel,
   tags,
+  wordCount,
 }: SpeechHeaderProps) {
   const formattedDate = format(new Date(deliveredAt), "MMMM d, yyyy");
 
@@ -117,6 +119,12 @@ export function SpeechHeader({
           <>
             <span className="text-muted-foreground/40">&middot;</span>
             <span>{formatDuration(duration)}</span>
+          </>
+        )}
+        {wordCount && (
+          <>
+            <span className="text-muted-foreground/40">&middot;</span>
+            <span>{Math.ceil(wordCount / 200)} min read</span>
           </>
         )}
       </div>

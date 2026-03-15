@@ -18,6 +18,7 @@ interface TranscriptPanelProps {
   activeParagraphIndex: number | null;
   onParagraphClick: (index: number) => void;
   highlightText?: string;
+  speechSlug?: string;
   /** When true, constrains height for side-by-side layout with video */
   constrained?: boolean;
 }
@@ -27,6 +28,7 @@ export function TranscriptPanel({
   activeParagraphIndex,
   onParagraphClick,
   highlightText,
+  speechSlug,
   constrained = false,
 }: TranscriptPanelProps) {
   const scrollContainerRef = useRef<HTMLDivElement>(null);
@@ -67,6 +69,7 @@ export function TranscriptPanel({
           speakerLabel={paragraph.speakerLabel}
           isActive={activeParagraphIndex === paragraph.index}
           highlightText={highlightText}
+          speechSlug={speechSlug}
           onParagraphClick={onParagraphClick}
         />
       ))}

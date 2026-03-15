@@ -45,6 +45,7 @@ interface ParagraphData {
 
 interface SpeechViewerProps {
   speechId: string;
+  speechSlug: string;
   paragraphs: ParagraphData[];
   videoEmbedId?: string | null;
   videoSource?: string | null;
@@ -79,6 +80,7 @@ function ToolbarButton({ icon, label, active, disabled, onClick }: ToolbarButton
 
 export function SpeechViewer({
   speechId,
+  speechSlug,
   paragraphs,
   videoEmbedId,
   videoSource,
@@ -250,6 +252,7 @@ export function SpeechViewer({
               paragraphs={paragraphs}
               activeParagraphIndex={activeParagraphIndex}
               onParagraphClick={handleParagraphClick}
+              speechSlug={speechSlug}
               constrained
             />
           </div>
@@ -283,6 +286,7 @@ export function SpeechViewer({
           paragraphs={paragraphs}
           activeParagraphIndex={activeParagraphIndex}
           onParagraphClick={handleParagraphClick}
+          speechSlug={speechSlug}
         />
       )}
     </div>

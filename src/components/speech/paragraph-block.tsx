@@ -1,6 +1,7 @@
 "use client";
 
-import { useRef, useEffect, useMemo, type ReactNode } from "react";
+import { useRef, useEffect, useMemo, useState, useCallback, type ReactNode } from "react";
+import { Link2, Check } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 interface ParagraphBlockProps {
@@ -11,6 +12,7 @@ interface ParagraphBlockProps {
   speakerLabel: string | null;
   isActive: boolean;
   highlightText?: string;
+  speechSlug?: string;
   onParagraphClick: (index: number) => void;
 }
 
@@ -61,9 +63,23 @@ export function ParagraphBlock({
   speakerLabel,
   isActive,
   highlightText,
+  speechSlug,
   onParagraphClick,
 }: ParagraphBlockProps) {
   const ref = useRef<HTMLDivElement>(null);
+  const [copied, setCopied] = useState(false);
+
+  const handleCopyLink = useCallback(
+    (e: React.MouseEvent) => {
+      e.stopPropagation();
+      const url = `${window.location.origin}/speeches/${speechSlug}#p${index + 1}`;
+      navigator.clipboard.writeText(url).then(() => {
+        setCopied(true);
+        setTimeout(() => setCopied(false), 2000);
+      });
+    },
+    [speechSlug, index]
+  );
 
   // Scroll into view when this paragraph becomes active
   useEffect(() => {
@@ -82,6 +98,7 @@ export function ParagraphBlock({
   return (
     <div
       ref={ref}
+      id={`p${index + 1}`}
       className={cn(
         "transcript-paragraph group relative flex gap-6 py-3 -mx-4 px-4 rounded-sm transition-colors duration-200",
         isActive && "bg-amber-50/80 dark:bg-amber-950/20",
@@ -122,6 +139,21 @@ export function ParagraphBlock({
         {/* Paragraph text */}
         <p className="text-foreground/90">{renderedText}</p>
       </div>
+
+      {/* Copy link button */}
+      {speechSlug && (
+        <button
+          onClick={handleCopyLink}
+          className="shrink-0 self-start mt-0.5 opacity-0 group-hover:opacity-100 transition-opacity text-muted-foreground/40 hover:text-foreground"
+          title="Copy link to paragraph"
+        >
+          {copied ? (
+            <Check className="size-3.5 text-emerald-600" />
+          ) : (
+            <Link2 className="size-3.5" />
+          )}
+        </button>
+      )}
     </div>
   );
 }

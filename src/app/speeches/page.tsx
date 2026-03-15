@@ -20,6 +20,7 @@ async function getPublishedSpeeches() {
         select: {
           slug: true,
           name: true,
+          country: true,
         },
       },
       tags: {
@@ -51,12 +52,17 @@ export default async function SpeechesPage() {
     leader: {
       name: speech.leader.name,
       slug: speech.leader.slug,
+      country: speech.leader.country,
     },
     tags: speech.tags.map((st) => ({
       slug: st.tag.slug,
       name: st.tag.name,
     })),
   }));
+
+  // Extract unique countries and years for filters
+  const countries = Array.from(new Set(serialized.map((s) => s.leader.country))).sort();
+  const years = Array.from(new Set(serialized.map((s) => new Date(s.deliveredAt).getFullYear()))).sort((a, b) => b - a);
 
   return (
     <>
@@ -71,7 +77,11 @@ export default async function SpeechesPage() {
             Full transcripts of speeches by world leaders, sorted by date.
           </p>
 
-          <SpeechListFilter speeches={serialized} />
+          <SpeechListFilter
+            speeches={serialized}
+            countries={countries}
+            years={years}
+          />
         </section>
       </main>
 
