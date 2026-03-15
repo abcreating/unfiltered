@@ -1,15 +1,14 @@
 import * as cheerio from "cheerio";
 import type { ScrapedSpeech, ScraperSource } from "./types";
 
-const UA = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36";
-
-export const unScraper: ScraperSource = {
-  name: "un",
+export const elyseeScraper: ScraperSource = {
+  name: "elysee",
 
   async scrape(url: string): Promise<ScrapedSpeech> {
     const response = await fetch(url, {
-      headers: { "User-Agent": UA },
-      redirect: "follow",
+      headers: {
+        "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36",
+      },
     });
 
     if (!response.ok) {
@@ -19,19 +18,18 @@ export const unScraper: ScraperSource = {
     const html = await response.text();
     const $ = cheerio.load(html);
 
-    const title = $("h1").first().text().trim() ||
-      $(".field--name-title").first().text().trim() ||
-      "UN Statement";
+    const title =
+      $("h1").first().text().trim() ||
+      $(".article-header__title").first().text().trim() ||
+      "Élysée Statement";
 
     const paragraphs: string[] = [];
     const contentSelectors = [
+      ".article-content",
       ".field--name-body",
-      ".field-item",
-      "#content-area",
+      ".article__body",
       "article .content",
-      ".node-content",
       "article",
-      "main",
     ];
 
     for (const selector of contentSelectors) {
@@ -52,46 +50,43 @@ export const unScraper: ScraperSource = {
 
     const dateStr =
       $('meta[property="article:published_time"]').attr("content") ||
-      $("time").first().attr("datetime") ||
-      $(".date-display-single").first().attr("content");
+      $("time").first().attr("datetime");
 
     return {
       title,
-      leaderSlug: "antonio-guterres",
+      leaderSlug: "emmanuel-macron",
       paragraphs,
       deliveredAt: dateStr ? new Date(dateStr) : new Date(),
       sourceUrl: url,
-      venue: "United Nations",
-      city: "New York",
-      country: "United States",
-      countryCode: "US",
-      originalLang: "en",
+      country: "France",
+      countryCode: "FR",
+      originalLang: "fr",
+      occasion: "Élysée Statement",
     };
   },
 
   async discover(): Promise<string[]> {
     try {
-      const response = await fetch("https://press.un.org/en", {
-        headers: { "User-Agent": UA },
-        redirect: "follow",
-      });
+      const response = await fetch(
+        "https://www.elysee.fr/en/all-the-news?categories%5B%5D=speeches-and-statements",
+        {
+          headers: {
+            "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36",
+          },
+        }
+      );
       if (!response.ok) return [];
 
       const html = await response.text();
       const $ = cheerio.load(html);
 
       const urls: string[] = [];
-
-      // Look for Secretary-General statements (sgsm) and other speech docs
-      $("a[href]").each((_, el) => {
+      $("a[href*='/en/emmanuel-macron/']").each((_, el) => {
         const href = $(el).attr("href");
-        if (!href) return;
-
-        // Match sgsm (SG statements), dsgsm (Deputy SG), sgt (SG travels)
-        if (href.match(/\/(sgsm|dsgsm|sgt)\d+\.doc\.htm$/)) {
+        if (href) {
           const fullUrl = href.startsWith("http")
             ? href
-            : `https://press.un.org${href}`;
+            : `https://www.elysee.fr${href}`;
           if (!urls.includes(fullUrl)) {
             urls.push(fullUrl);
           }

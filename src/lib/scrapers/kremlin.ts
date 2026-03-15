@@ -1,15 +1,14 @@
 import * as cheerio from "cheerio";
 import type { ScrapedSpeech, ScraperSource } from "./types";
 
-const UA = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36";
-
-export const unScraper: ScraperSource = {
-  name: "un",
+export const kremlinScraper: ScraperSource = {
+  name: "kremlin",
 
   async scrape(url: string): Promise<ScrapedSpeech> {
     const response = await fetch(url, {
-      headers: { "User-Agent": UA },
-      redirect: "follow",
+      headers: {
+        "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36",
+      },
     });
 
     if (!response.ok) {
@@ -19,19 +18,17 @@ export const unScraper: ScraperSource = {
     const html = await response.text();
     const $ = cheerio.load(html);
 
-    const title = $("h1").first().text().trim() ||
-      $(".field--name-title").first().text().trim() ||
-      "UN Statement";
+    const title =
+      $("h1").first().text().trim() ||
+      $(".entry-title").first().text().trim() ||
+      "Kremlin Statement";
 
     const paragraphs: string[] = [];
     const contentSelectors = [
-      ".field--name-body",
-      ".field-item",
-      "#content-area",
-      "article .content",
-      ".node-content",
+      ".entry-content",
+      ".read__internal_content",
+      ".article__text",
       "article",
-      "main",
     ];
 
     for (const selector of contentSelectors) {
@@ -53,27 +50,27 @@ export const unScraper: ScraperSource = {
     const dateStr =
       $('meta[property="article:published_time"]').attr("content") ||
       $("time").first().attr("datetime") ||
-      $(".date-display-single").first().attr("content");
+      $(".read__published .read__published_dt").first().text().trim();
 
     return {
       title,
-      leaderSlug: "antonio-guterres",
+      leaderSlug: "vladimir-putin",
       paragraphs,
       deliveredAt: dateStr ? new Date(dateStr) : new Date(),
       sourceUrl: url,
-      venue: "United Nations",
-      city: "New York",
-      country: "United States",
-      countryCode: "US",
+      country: "Russia",
+      countryCode: "RU",
       originalLang: "en",
+      occasion: "Kremlin Statement",
     };
   },
 
   async discover(): Promise<string[]> {
     try {
-      const response = await fetch("https://press.un.org/en", {
-        headers: { "User-Agent": UA },
-        redirect: "follow",
+      const response = await fetch("http://en.kremlin.ru/events/president/transcripts", {
+        headers: {
+          "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36",
+        },
       });
       if (!response.ok) return [];
 
@@ -81,17 +78,12 @@ export const unScraper: ScraperSource = {
       const $ = cheerio.load(html);
 
       const urls: string[] = [];
-
-      // Look for Secretary-General statements (sgsm) and other speech docs
-      $("a[href]").each((_, el) => {
+      $("a[href*='/events/president/transcripts/']").each((_, el) => {
         const href = $(el).attr("href");
-        if (!href) return;
-
-        // Match sgsm (SG statements), dsgsm (Deputy SG), sgt (SG travels)
-        if (href.match(/\/(sgsm|dsgsm|sgt)\d+\.doc\.htm$/)) {
+        if (href && href !== "/events/president/transcripts/") {
           const fullUrl = href.startsWith("http")
             ? href
-            : `https://press.un.org${href}`;
+            : `http://en.kremlin.ru${href}`;
           if (!urls.includes(fullUrl)) {
             urls.push(fullUrl);
           }

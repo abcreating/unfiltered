@@ -1,15 +1,14 @@
 import * as cheerio from "cheerio";
 import type { ScrapedSpeech, ScraperSource } from "./types";
 
-const UA = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36";
-
-export const unScraper: ScraperSource = {
-  name: "un",
+export const pmoIndiaScraper: ScraperSource = {
+  name: "pmo-india",
 
   async scrape(url: string): Promise<ScrapedSpeech> {
     const response = await fetch(url, {
-      headers: { "User-Agent": UA },
-      redirect: "follow",
+      headers: {
+        "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36",
+      },
     });
 
     if (!response.ok) {
@@ -19,19 +18,19 @@ export const unScraper: ScraperSource = {
     const html = await response.text();
     const $ = cheerio.load(html);
 
-    const title = $("h1").first().text().trim() ||
-      $(".field--name-title").first().text().trim() ||
-      "UN Statement";
+    const title =
+      $("h1").first().text().trim() ||
+      $(".press-title").first().text().trim() ||
+      "PM India Statement";
 
     const paragraphs: string[] = [];
     const contentSelectors = [
+      ".press-content-text",
       ".field--name-body",
-      ".field-item",
-      "#content-area",
+      ".node__content",
       "article .content",
-      ".node-content",
+      ".content-area",
       "article",
-      "main",
     ];
 
     for (const selector of contentSelectors) {
@@ -52,28 +51,27 @@ export const unScraper: ScraperSource = {
 
     const dateStr =
       $('meta[property="article:published_time"]').attr("content") ||
-      $("time").first().attr("datetime") ||
-      $(".date-display-single").first().attr("content");
+      $("time").first().attr("datetime");
 
     return {
       title,
-      leaderSlug: "antonio-guterres",
+      leaderSlug: "narendra-modi",
       paragraphs,
       deliveredAt: dateStr ? new Date(dateStr) : new Date(),
       sourceUrl: url,
-      venue: "United Nations",
-      city: "New York",
-      country: "United States",
-      countryCode: "US",
+      country: "India",
+      countryCode: "IN",
       originalLang: "en",
+      occasion: "PM India Statement",
     };
   },
 
   async discover(): Promise<string[]> {
     try {
-      const response = await fetch("https://press.un.org/en", {
-        headers: { "User-Agent": UA },
-        redirect: "follow",
+      const response = await fetch("https://www.pmindia.gov.in/en/news_updates/", {
+        headers: {
+          "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36",
+        },
       });
       if (!response.ok) return [];
 
@@ -81,17 +79,12 @@ export const unScraper: ScraperSource = {
       const $ = cheerio.load(html);
 
       const urls: string[] = [];
-
-      // Look for Secretary-General statements (sgsm) and other speech docs
-      $("a[href]").each((_, el) => {
+      $("a[href*='/en/news_updates/']").each((_, el) => {
         const href = $(el).attr("href");
-        if (!href) return;
-
-        // Match sgsm (SG statements), dsgsm (Deputy SG), sgt (SG travels)
-        if (href.match(/\/(sgsm|dsgsm|sgt)\d+\.doc\.htm$/)) {
+        if (href && href !== "/en/news_updates/" && href.length > 25) {
           const fullUrl = href.startsWith("http")
             ? href
-            : `https://press.un.org${href}`;
+            : `https://www.pmindia.gov.in${href}`;
           if (!urls.includes(fullUrl)) {
             urls.push(fullUrl);
           }

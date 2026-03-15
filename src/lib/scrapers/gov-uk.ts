@@ -1,14 +1,15 @@
 import * as cheerio from "cheerio";
 import type { ScrapedSpeech, ScraperSource } from "./types";
 
+const UA = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36";
+
 export const govUkScraper: ScraperSource = {
   name: "gov-uk",
 
   async scrape(url: string): Promise<ScrapedSpeech> {
     const response = await fetch(url, {
-      headers: {
-        "User-Agent": "Mozilla/5.0 (compatible; Unfiltered/1.0)",
-      },
+      headers: { "User-Agent": UA },
+      redirect: "follow",
     });
 
     if (!response.ok) {
@@ -29,7 +30,7 @@ export const govUkScraper: ScraperSource = {
     });
 
     if (paragraphs.length === 0) {
-      $("article p, .content p").each((_, el) => {
+      $("article p, .content p, main p").each((_, el) => {
         const text = $(el).text().trim();
         if (text.length > 20) {
           paragraphs.push(text);
@@ -41,13 +42,20 @@ export const govUkScraper: ScraperSource = {
       throw new Error(`No speech content found at ${url}`);
     }
 
+    // Try to detect leader from page content
+    let leaderSlug = "keir-starmer";
+    const fromText = $(".from a, .metadata .definition-list dd a").text().toLowerCase();
+    if (fromText.includes("foreign") || fromText.includes("lammy")) {
+      leaderSlug = "david-lammy";
+    }
+
     const dateStr =
       $('meta[name="govuk:first-published-at"]').attr("content") ||
       $("time").first().attr("datetime");
 
     return {
       title,
-      leaderSlug: "keir-starmer",
+      leaderSlug,
       paragraphs,
       deliveredAt: dateStr ? new Date(dateStr) : new Date(),
       sourceUrl: url,
@@ -59,31 +67,26 @@ export const govUkScraper: ScraperSource = {
 
   async discover(): Promise<string[]> {
     try {
+      // Use gov.uk search API for reliable results
       const response = await fetch(
-        "https://www.gov.uk/search/all?content_purpose_supergroup%5B%5D=news_and_communications&content_store_document_type%5B%5D=speech&order=updated-newest",
+        "https://www.gov.uk/api/search.json?filter_content_store_document_type=speech&order=-public_timestamp&count=20",
         {
-          headers: {
-            "User-Agent": "Mozilla/5.0 (compatible; Unfiltered/1.0)",
-          },
+          headers: { "User-Agent": UA },
         }
       );
       if (!response.ok) return [];
 
-      const html = await response.text();
-      const $ = cheerio.load(html);
-
+      const data = await response.json();
       const urls: string[] = [];
-      $("a.gem-c-document-list__item-title").each((_, el) => {
-        const href = $(el).attr("href");
-        if (href) {
-          const fullUrl = href.startsWith("http")
-            ? href
-            : `https://www.gov.uk${href}`;
-          if (!urls.includes(fullUrl)) {
+
+      if (data.results) {
+        for (const result of data.results) {
+          if (result.link) {
+            const fullUrl = `https://www.gov.uk${result.link}`;
             urls.push(fullUrl);
           }
         }
-      });
+      }
 
       return urls.slice(0, 20);
     } catch {
