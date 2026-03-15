@@ -12,7 +12,7 @@ import {
 type LanguageBadgeProps = {
   /** ISO 639 language code (e.g. "en", "uk", "ru") */
   code: string;
-  /** Whether this is a verified (human/official) translation or machine-generated */
+  /** Whether this is a verified (human/official) translation */
   verified?: boolean;
   /** Show tooltip with full language name on hover */
   showTooltip?: boolean;
@@ -63,7 +63,7 @@ export function LanguageBadge({
   }
 
   const fullName = getLanguageName(code);
-  const label = verified ? fullName : `${fullName} (machine translated)`;
+  const label = verified ? fullName : `${fullName} (translated)`;
 
   return (
     <TooltipProvider>

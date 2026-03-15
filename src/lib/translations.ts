@@ -153,7 +153,7 @@ export async function translateSpeech(
       speechId,
       lang: targetLang,
       title: translatedTitle,
-      provider: TranslationProvider.GOOGLE, // reusing enum, means "machine translated"
+      provider: TranslationProvider.GOOGLE,
       paragraphs: {
         create: translatedParagraphs.map((tp) => ({
           paragraphId: tp.paragraphId,
