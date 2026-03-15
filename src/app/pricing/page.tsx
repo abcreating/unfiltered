@@ -46,7 +46,7 @@ export default function PricingPage() {
               <ul className="space-y-3 text-sm text-foreground/80 mb-8">
                 <li className="flex items-start gap-2">
                   <span className="text-muted-foreground">—</span>
-                  3 full speech transcripts
+                  20 full speech transcripts
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-muted-foreground">—</span>

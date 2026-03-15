@@ -16,7 +16,7 @@ export function UpgradeBanner({ remaining = 0 }: UpgradeBannerProps) {
       <div className="relative z-10 border-t border-border py-12 text-center">
         <p className="text-sm uppercase tracking-widest text-muted-foreground mb-3">
           {remaining === 0
-            ? "You\u2019ve used all 3 free reads"
+            ? "You\u2019ve used all 20 free reads"
             : "Sign in to read full transcripts"}
         </p>
         <h3 className="heading-serif text-2xl text-foreground mb-2">

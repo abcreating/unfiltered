@@ -1,14 +1,14 @@
 import prisma from "./prisma";
 
-const FREE_READS = 3;
+const FREE_READS = 20;
 
 export async function canAccessSpeech(
   userId: string | null,
   speechId: string
 ): Promise<{ allowed: boolean; remaining: number; reason?: string }> {
-  // Not logged in — no access tracking, show preview only
+  // Not logged in — allow full access (can't track reads without a session)
   if (!userId) {
-    return { allowed: false, remaining: 0, reason: "not_authenticated" };
+    return { allowed: true, remaining: -1 };
   }
 
   const user = await prisma.user.findUnique({
