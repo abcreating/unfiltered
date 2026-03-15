@@ -1,8 +1,6 @@
 import prisma from "./prisma";
 import { TranslationProvider } from "@/generated/prisma";
 
-const LIBRETRANSLATE_URL = process.env.LIBRETRANSLATE_URL || "https://libretranslate.com";
-
 export const SUPPORTED_LANGUAGES = [
   { code: "en", name: "English" },
   { code: "es", name: "Spanish" },
@@ -32,27 +30,31 @@ export const SUPPORTED_LANGUAGES = [
 ];
 
 async function translateText(text: string, sourceLang: string, targetLang: string): Promise<string> {
-  const apiKey = process.env.LIBRETRANSLATE_API_KEY || "";
-
-  const response = await fetch(`${LIBRETRANSLATE_URL}/translate`, {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({
-      q: text,
-      source: sourceLang,
-      target: targetLang,
-      format: "text",
-      ...(apiKey ? { api_key: apiKey } : {}),
-    }),
+  const params = new URLSearchParams({
+    q: text,
+    langpair: `${sourceLang}|${targetLang}`,
   });
 
+  const email = process.env.MYMEMORY_EMAIL;
+  if (email) {
+    params.set("de", email);
+  }
+
+  const response = await fetch(
+    `https://api.mymemory.translated.net/get?${params.toString()}`
+  );
+
   if (!response.ok) {
-    const error = await response.text();
-    throw new Error(`Translation API error: ${error}`);
+    throw new Error(`Translation API error: ${response.status}`);
   }
 
   const data = await response.json();
-  return data.translatedText;
+
+  if (data.responseStatus !== 200) {
+    throw new Error(data.responseDetails || "Translation failed");
+  }
+
+  return data.responseData.translatedText;
 }
 
 export async function translateSpeech(
