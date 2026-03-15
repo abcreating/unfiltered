@@ -1,16 +1,12 @@
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
-import { getServerSession } from "next-auth";
 import prisma from "@/lib/prisma";
-import { authOptions } from "@/lib/auth";
-import { canAccessSpeech, recordSpeechView } from "@/lib/paywall";
 
 export const dynamic = "force-dynamic";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { SpeechHeader } from "@/components/speech/speech-header";
 import { SpeechViewer } from "@/components/speech/speech-viewer";
-import { UpgradeBanner } from "@/components/paywall/upgrade-banner";
 
 interface SpeechPageProps {
   params: { slug: string };
@@ -70,17 +66,8 @@ export default async function SpeechPage({ params }: SpeechPageProps) {
     notFound();
   }
 
-  // Check paywall
-  const session = await getServerSession(authOptions);
-  const userId = (session?.user as { id?: string })?.id || null;
-  const access = await canAccessSpeech(userId, speech.id);
-
-  if (access.allowed && userId) {
-    await recordSpeechView(userId, speech.id);
-  }
-
   // Serialize data for client components
-  const allParagraphs = speech.paragraphs.map((p) => ({
+  const serializedParagraphs = speech.paragraphs.map((p) => ({
     id: p.id,
     index: p.index,
     text: p.text,
@@ -88,11 +75,6 @@ export default async function SpeechPage({ params }: SpeechPageProps) {
     endTime: p.endTime,
     speakerLabel: p.speakerLabel,
   }));
-
-  // If not allowed, only show first 3 paragraphs
-  const serializedParagraphs = access.allowed
-    ? allParagraphs
-    : allParagraphs.slice(0, 3);
 
   const serializedLeader = {
     slug: speech.leader.slug,
@@ -137,7 +119,6 @@ export default async function SpeechPage({ params }: SpeechPageProps) {
           videoSource={speech.videoSource}
         />
 
-        {!access.allowed && <UpgradeBanner remaining={access.remaining} />}
       </main>
 
       <Footer />

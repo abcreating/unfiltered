@@ -2,7 +2,6 @@ import { NextRequest, NextResponse } from "next/server";
 import { getServerSession } from "next-auth";
 import { authOptions } from "@/lib/auth";
 import { translateSpeech, SUPPORTED_LANGUAGES } from "@/lib/translations";
-import prisma from "@/lib/prisma";
 
 export async function POST(
   request: NextRequest,
@@ -15,28 +14,6 @@ export async function POST(
       return NextResponse.json(
         { error: "Sign in to use translations" },
         { status: 401 }
-      );
-    }
-
-    // Check subscription status (translation is a Pro feature)
-    const user = await prisma.user.findUnique({
-      where: { email: session.user.email },
-    });
-
-    if (!user) {
-      return NextResponse.json({ error: "User not found" }, { status: 404 });
-    }
-
-    const isPro =
-      user.role === "ADMIN" ||
-      user.role === "EDITOR" ||
-      (user.subscriptionStatus === "ACTIVE" &&
-        (!user.subscriptionEnd || user.subscriptionEnd > new Date()));
-
-    if (!isPro) {
-      return NextResponse.json(
-        { error: "Translation requires an Unfiltered Pro subscription" },
-        { status: 403 }
       );
     }
 
