@@ -1,8 +1,21 @@
 import Link from "next/link";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
+import prisma from "@/lib/prisma";
+import { format } from "date-fns";
 
-export default function Home() {
+export const dynamic = "force-dynamic";
+
+export default async function Home() {
+  const recentSpeeches = await prisma.speech.findMany({
+    where: { status: "PUBLISHED" },
+    include: {
+      leader: { select: { name: true, slug: true } },
+    },
+    orderBy: { deliveredAt: "desc" },
+    take: 6,
+  });
+
   return (
     <>
       <Header />
@@ -46,29 +59,10 @@ export default function Home() {
           </h2>
 
           <div className="grid gap-6">
-            {/* Placeholder cards */}
-            {[
-              {
-                title: "Address to the UN General Assembly",
-                speaker: "Speaker Name",
-                date: "March 2026",
-                language: "English",
-              },
-              {
-                title: "State of the Nation Address",
-                speaker: "Speaker Name",
-                date: "February 2026",
-                language: "English",
-              },
-              {
-                title: "Remarks on Climate Policy",
-                speaker: "Speaker Name",
-                date: "January 2026",
-                language: "French",
-              },
-            ].map((speech) => (
-              <article
-                key={speech.title}
+            {recentSpeeches.map((speech) => (
+              <Link
+                key={speech.id}
+                href={`/speeches/${speech.slug}`}
                 className="group flex items-baseline justify-between py-4 border-b border-border/50 last:border-b-0"
               >
                 <div className="min-w-0">
@@ -76,19 +70,25 @@ export default function Home() {
                     {speech.title}
                   </h3>
                   <p className="text-sm text-muted-foreground mt-1">
-                    {speech.speaker}
+                    {speech.leader.name}
                   </p>
                 </div>
                 <div className="flex items-center gap-4 ml-8 shrink-0">
                   <span className="text-xs text-muted-foreground/60 uppercase tracking-wide">
-                    {speech.language}
+                    {speech.originalLang}
                   </span>
                   <span className="text-sm text-muted-foreground tabular-nums">
-                    {speech.date}
+                    {format(new Date(speech.deliveredAt), "MMM yyyy")}
                   </span>
                 </div>
-              </article>
+              </Link>
             ))}
+
+            {recentSpeeches.length === 0 && (
+              <p className="text-sm text-muted-foreground py-4">
+                No speeches published yet.
+              </p>
+            )}
           </div>
 
           <div className="mt-8">

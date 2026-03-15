@@ -98,8 +98,20 @@ async function main() {
 
   const leaderMap: Record<string, string> = {};
   for (const leader of leadersData) {
-    const created = await prisma.leader.create({
-      data: {
+    const created = await prisma.leader.upsert({
+      where: { slug: leader.slug },
+      update: {
+        name: leader.name,
+        nameLocal: leader.nameLocal,
+        country: leader.country,
+        countryCode: leader.countryCode,
+        organization: leader.organization,
+        role: leader.role,
+        languages: JSON.stringify(leader.languages),
+        bio: leader.bio,
+        photoUrl: leader.photoUrl,
+      },
+      create: {
         slug: leader.slug,
         name: leader.name,
         nameLocal: leader.nameLocal,

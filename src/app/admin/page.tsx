@@ -9,7 +9,7 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { FileText, Users, CheckCircle, PenLine, Plus } from "lucide-react";
+import { FileText, Users, CheckCircle, PenLine, Plus, Download } from "lucide-react";
 
 async function getStats() {
   const [totalSpeeches, totalLeaders, publishedSpeeches, draftSpeeches] =
@@ -105,6 +105,12 @@ export default async function AdminDashboard() {
           <Button variant="outline" size="lg" className="gap-2">
             <Plus className="size-4" />
             Add Leader
+          </Button>
+        </Link>
+        <Link href="/admin/ingestion">
+          <Button variant="outline" size="lg" className="gap-2">
+            <Download className="size-4" />
+            Ingest Speech
           </Button>
         </Link>
       </div>

@@ -8,7 +8,7 @@
     "organization": null,
     "role": "President",
     "languages": ["uk", "ru", "en"],
-    "bio": "President of Ukraine since May 2019, previously known as a comedian and actor who starred in the television series Servant of the People. He has led Ukraine through the full-scale Russian invasion that began in February 2022, becoming a prominent wartime leader on the global stage. Zelenskyy has addressed numerous international bodies to rally support for Ukrainian sovereignty and defense."
+    "bio": "President of Ukraine since May 2019. A former comedian and actor, he has led Ukraine through the full-scale Russian invasion since February 2022, becoming a prominent wartime leader and addressing numerous international bodies to rally support for Ukrainian sovereignty."
   },
   {
     "slug": "donald-trump",
@@ -19,7 +19,7 @@
     "organization": null,
     "role": "President",
     "languages": ["en"],
-    "bio": "45th and 47th President of the United States, serving from 2017 to 2021 and again from January 2025. A businessman and media personality before entering politics, he won the 2024 presidential election to become the second president in American history to serve non-consecutive terms. His political platform centers on immigration enforcement, trade protectionism, and an America First foreign policy."
+    "bio": "45th and 47th President of the United States, serving 2017\u20132021 and again from January 2025. His platform centers on immigration enforcement, trade protectionism, and an America First foreign policy."
   },
   {
     "slug": "joe-biden",
@@ -30,7 +30,7 @@
     "organization": null,
     "role": "Former President",
     "languages": ["en"],
-    "bio": "46th President of the United States, serving from January 2021 to January 2025. Previously served as Vice President under Barack Obama from 2009 to 2017 and represented Delaware in the U.S. Senate for 36 years. His presidency focused on COVID-19 recovery, infrastructure investment, and reinforcing transatlantic alliances."
+    "bio": "46th President of the United States (2021\u20132025). Previously served as Vice President under Obama and represented Delaware in the Senate for 36 years. Focused on COVID-19 recovery, infrastructure, and transatlantic alliances."
   },
   {
     "slug": "vladimir-putin",
@@ -41,7 +41,7 @@
     "organization": null,
     "role": "President",
     "languages": ["ru"],
-    "bio": "President of Russia since 2000, with a brief interlude as Prime Minister from 2008 to 2012. A former KGB intelligence officer, he has dominated Russian politics for over two decades and centralized executive power. He launched the full-scale invasion of Ukraine in February 2022, fundamentally reshaping European security."
+    "bio": "President of Russia since 2000 (with a brief stint as PM 2008\u20132012). Former KGB officer who launched the full-scale invasion of Ukraine in February 2022."
   },
   {
     "slug": "xi-jinping",
@@ -52,7 +52,7 @@
     "organization": null,
     "role": "President / General Secretary of the CPC",
     "languages": ["zh"],
-    "bio": "General Secretary of the Chinese Communist Party since 2012 and President of the People's Republic of China since 2013. He has consolidated power to a degree unseen since Mao Zedong, eliminating presidential term limits in 2018. His tenure has emphasized national rejuvenation, technological self-reliance, and an assertive foreign policy."
+    "bio": "General Secretary of the Chinese Communist Party since 2012 and President since 2013. Has consolidated power to a degree unseen since Mao, eliminating presidential term limits in 2018."
   },
   {
     "slug": "emmanuel-macron",
@@ -63,7 +63,7 @@
     "organization": null,
     "role": "President",
     "languages": ["fr", "en"],
-    "bio": "President of France since May 2017, the youngest president in French history at the time of his election at age 39. A former investment banker and economy minister, he founded the centrist party En Marche (now Renaissance) and won re-election in 2022. He has positioned himself as a leading voice for European strategic autonomy and multilateral cooperation."
+    "bio": "President of France since 2017. Former investment banker who founded En Marche and won re-election in 2022. A leading voice for European strategic autonomy."
   },
   {
     "slug": "narendra-modi",
@@ -74,7 +74,7 @@
     "organization": null,
     "role": "Prime Minister",
     "languages": ["hi", "gu", "en"],
-    "bio": "Prime Minister of India since May 2014, leading the Bharatiya Janata Party to three consecutive general election victories. Previously served as Chief Minister of Gujarat from 2001 to 2014, overseeing rapid economic growth in the state. His tenure has focused on economic modernization, digital infrastructure, and elevating India's role in global affairs."
+    "bio": "Prime Minister of India since 2014, leading the BJP to three consecutive election victories. Focused on economic modernization and elevating India's global role. Chaired the G20 in 2023."
   },
   {
     "slug": "luiz-inacio-lula-da-silva",
@@ -85,7 +85,7 @@
     "organization": null,
     "role": "President",
     "languages": ["pt"],
-    "bio": "President of Brazil serving his third term since January 2023, having previously served from 2003 to 2010. A former metalworker and union leader, he co-founded the Workers' Party and led Brazil through a period of significant economic growth and poverty reduction during his first two terms. His return to power followed a contentious legal saga and a narrow election victory over incumbent Jair Bolsonaro."
+    "bio": "President of Brazil serving his third term since January 2023 (previously 2003\u20132010). Former metalworker and union leader who co-founded the Workers' Party. Chaired the G20 in 2024."
   },
   {
     "slug": "cyril-ramaphosa",
@@ -96,7 +96,7 @@
     "organization": null,
     "role": "President",
     "languages": ["en", "zu", "xh"],
-    "bio": "President of South Africa since February 2018, succeeding Jacob Zuma. A former trade union leader and key negotiator during the transition from apartheid, he later became one of South Africa's wealthiest businessmen. He has focused on anti-corruption reforms and economic recovery while navigating coalition politics after the ANC lost its parliamentary majority in 2024."
+    "bio": "President of South Africa since 2018. Former trade union leader and key apartheid transition negotiator. Navigating coalition politics after the ANC lost its parliamentary majority in 2024."
   },
   {
     "slug": "javier-milei",
@@ -107,7 +107,161 @@
     "organization": null,
     "role": "President",
     "languages": ["es", "en"],
-    "bio": "President of Argentina since December 2023, a libertarian economist who won office as a political outsider campaigning against what he called the political caste. Known for his dramatic rhetorical style and radical free-market proposals, including dollarization and the elimination of government ministries. His presidency represents a sharp ideological shift in Argentine politics toward economic deregulation and fiscal austerity."
+    "bio": "President of Argentina since December 2023. Libertarian economist who won office as a political outsider. Known for radical free-market proposals and dramatic rhetoric."
+  },
+  {
+    "slug": "recep-tayyip-erdogan",
+    "name": "Recep Tayyip Erdo\u011fan",
+    "nameLocal": null,
+    "country": "Turkey",
+    "countryCode": "TR",
+    "organization": null,
+    "role": "President",
+    "languages": ["tr"],
+    "bio": "President of Turkey since 2014, previously PM from 2003. Has consolidated executive power and positioned Turkey as a regional power broker."
+  },
+  {
+    "slug": "abdel-fattah-el-sisi",
+    "name": "Abdel Fattah el-Sisi",
+    "nameLocal": "\u0639\u0628\u062f \u0627\u0644\u0641\u062a\u0627\u062d \u0627\u0644\u0633\u064a\u0633\u064a",
+    "country": "Egypt",
+    "countryCode": "EG",
+    "organization": null,
+    "role": "President",
+    "languages": ["ar"],
+    "bio": "President of Egypt since 2014. Former military commander who led the 2013 overthrow of Mohamed Morsi."
+  },
+  {
+    "slug": "yoon-suk-yeol",
+    "name": "Yoon Suk-yeol",
+    "nameLocal": "\uc724\uc11d\uc5f4",
+    "country": "South Korea",
+    "countryCode": "KR",
+    "organization": null,
+    "role": "President",
+    "languages": ["ko"],
+    "bio": "President of South Korea since May 2022. Former prosecutor general. Faced a martial law crisis in December 2024 and subsequent impeachment."
+  },
+  {
+    "slug": "ferdinand-marcos-jr",
+    "name": "Ferdinand Marcos Jr",
+    "nameLocal": null,
+    "country": "Philippines",
+    "countryCode": "PH",
+    "organization": null,
+    "role": "President",
+    "languages": ["fil", "en"],
+    "bio": "President of the Philippines since June 2022. Son of former dictator Ferdinand Marcos. Has strengthened defense ties with the US amid South China Sea tensions."
+  },
+  {
+    "slug": "joko-widodo",
+    "name": "Joko Widodo",
+    "nameLocal": null,
+    "country": "Indonesia",
+    "countryCode": "ID",
+    "organization": null,
+    "role": "Former President",
+    "languages": ["id", "jv"],
+    "bio": "President of Indonesia from 2014 to October 2024. Known as Jokowi, the first Indonesian president without a military or political elite background."
+  },
+  {
+    "slug": "prabowo-subianto",
+    "name": "Prabowo Subianto",
+    "nameLocal": null,
+    "country": "Indonesia",
+    "countryCode": "ID",
+    "organization": null,
+    "role": "President",
+    "languages": ["id", "en"],
+    "bio": "President of Indonesia since October 2024. Former military general and defense minister who won the 2024 presidential election."
+  },
+  {
+    "slug": "bola-tinubu",
+    "name": "Bola Tinubu",
+    "nameLocal": null,
+    "country": "Nigeria",
+    "countryCode": "NG",
+    "organization": null,
+    "role": "President",
+    "languages": ["en", "yo"],
+    "bio": "President of Nigeria since May 2023. Former Lagos governor. Embarked on economic reforms including fuel subsidy removal and currency float."
+  },
+  {
+    "slug": "william-ruto",
+    "name": "William Ruto",
+    "nameLocal": null,
+    "country": "Kenya",
+    "countryCode": "KE",
+    "organization": null,
+    "role": "President",
+    "languages": ["en", "sw"],
+    "bio": "President of Kenya since September 2022. Rose from humble origins to the presidency. Focused on digital economy and agricultural reform."
+  },
+  {
+    "slug": "gustavo-petro",
+    "name": "Gustavo Petro",
+    "nameLocal": null,
+    "country": "Colombia",
+    "countryCode": "CO",
+    "organization": null,
+    "role": "President",
+    "languages": ["es"],
+    "bio": "President of Colombia since August 2022, the country's first left-wing president. Former guerrilla member and mayor of Bogot\u00e1."
+  },
+  {
+    "slug": "gabriel-boric",
+    "name": "Gabriel Boric",
+    "nameLocal": null,
+    "country": "Chile",
+    "countryCode": "CL",
+    "organization": null,
+    "role": "President",
+    "languages": ["es"],
+    "bio": "President of Chile since March 2022, the youngest in Chilean history. Former student protest leader."
+  },
+  {
+    "slug": "andres-manuel-lopez-obrador",
+    "name": "Andr\u00e9s Manuel L\u00f3pez Obrador",
+    "nameLocal": null,
+    "country": "Mexico",
+    "countryCode": "MX",
+    "organization": null,
+    "role": "Former President",
+    "languages": ["es"],
+    "bio": "President of Mexico from 2018 to October 2024. Known as AMLO, led the Morena movement with a focus on austerity and social programs."
+  },
+  {
+    "slug": "claudia-sheinbaum",
+    "name": "Claudia Sheinbaum",
+    "nameLocal": null,
+    "country": "Mexico",
+    "countryCode": "MX",
+    "organization": null,
+    "role": "President",
+    "languages": ["es", "en"],
+    "bio": "President of Mexico since October 2024, the first woman to hold the office. Former head of government of Mexico City and environmental engineer."
+  },
+  {
+    "slug": "paul-kagame",
+    "name": "Paul Kagame",
+    "nameLocal": null,
+    "country": "Rwanda",
+    "countryCode": "RW",
+    "organization": null,
+    "role": "President",
+    "languages": ["rw", "en", "fr", "sw"],
+    "bio": "President of Rwanda since 2000. Led the RPF force that ended the 1994 genocide. Credited with rapid economic development."
+  },
+  {
+    "slug": "andrzej-duda",
+    "name": "Andrzej Duda",
+    "nameLocal": null,
+    "country": "Poland",
+    "countryCode": "PL",
+    "organization": null,
+    "role": "President",
+    "languages": ["pl", "en"],
+    "bio": "President of Poland since 2015. Major advocate for NATO's eastern flank reinforcement since Russia's invasion of Ukraine."
   },
   {
     "slug": "ali-khamenei",
@@ -118,7 +272,7 @@
     "organization": null,
     "role": "Supreme Leader",
     "languages": ["fa", "ar"],
-    "bio": "Supreme Leader of Iran since 1989, succeeding Ruhollah Khomeini as the highest political and religious authority in the Islamic Republic. Previously served as President of Iran from 1981 to 1989. He holds ultimate authority over Iran's foreign policy, military, and nuclear program, and has overseen the country through decades of tensions with Western powers."
+    "bio": "Supreme Leader of Iran since 1989. Holds ultimate authority over foreign policy, military, and nuclear program."
   },
   {
     "slug": "ebrahim-raisi",
@@ -129,7 +283,40 @@
     "organization": null,
     "role": "Former President (deceased)",
     "languages": ["fa"],
-    "bio": "President of Iran from August 2021 until his death in a helicopter crash in May 2024. A conservative cleric and jurist, he previously served as head of Iran's judiciary and was sanctioned by Western governments for human rights abuses. His presidency saw the collapse of the JCPOA nuclear negotiations and a deepening of Iran's alignment with Russia and China."
+    "bio": "President of Iran from 2021 until his death in a helicopter crash in May 2024."
+  },
+  {
+    "slug": "masoud-pezeshkian",
+    "name": "Masoud Pezeshkian",
+    "nameLocal": "\u0645\u0633\u0639\u0648\u062f \u067e\u0632\u0634\u06a9\u06cc\u0627\u0646",
+    "country": "Iran",
+    "countryCode": "IR",
+    "organization": null,
+    "role": "President",
+    "languages": ["fa", "az", "tr"],
+    "bio": "President of Iran since July 2024. Reformist-leaning heart surgeon who won a snap election following Raisi's death."
+  },
+  {
+    "slug": "mohammed-bin-salman",
+    "name": "Mohammed bin Salman",
+    "nameLocal": "\u0645\u062d\u0645\u062f \u0628\u0646 \u0633\u0644\u0645\u0627\u0646",
+    "country": "Saudi Arabia",
+    "countryCode": "SA",
+    "organization": null,
+    "role": "Crown Prince",
+    "languages": ["ar", "en"],
+    "bio": "Crown Prince of Saudi Arabia and de facto ruler since 2017. Driving Vision 2030 economic diversification."
+  },
+  {
+    "slug": "alexander-lukashenko",
+    "name": "Alexander Lukashenko",
+    "nameLocal": "\u0410\u043b\u044f\u043a\u0441\u0430\u043d\u0434\u0440 \u041b\u0443\u043a\u0430\u0448\u044d\u043d\u043a\u0430",
+    "country": "Belarus",
+    "countryCode": "BY",
+    "organization": null,
+    "role": "President",
+    "languages": ["be", "ru"],
+    "bio": "President of Belarus since 1994. Cracked down on 2020 protests and allowed Russia to use Belarus as a staging ground for the Ukraine invasion."
   },
   {
     "slug": "ahmed-al-sharaa",
@@ -140,7 +327,7 @@
     "organization": null,
     "role": "President",
     "languages": ["ar"],
-    "bio": "President of Syria following the fall of the Assad regime in December 2024, previously known by his nom de guerre Abu Mohammed al-Julani. He led Hayat Tahrir al-Sham and the broader opposition coalition that toppled Bashar al-Assad's government after a rapid military advance. He has sought to present himself as a pragmatic leader focused on rebuilding Syria and establishing relations with the international community."
+    "bio": "President of Syria following the fall of the Assad regime in December 2024. Previously known as Abu Mohammed al-Julani."
   },
   {
     "slug": "benjamin-netanyahu",
@@ -151,7 +338,359 @@
     "organization": null,
     "role": "Prime Minister",
     "languages": ["he", "en"],
-    "bio": "Prime Minister of Israel and the longest-serving leader in Israeli history, currently serving his sixth government since returning to power in December 2022. Previously served as Prime Minister from 1996 to 1999 and from 2009 to 2021. His current term has been defined by the October 7, 2023 Hamas attack and the subsequent military operations in Gaza, as well as his ongoing corruption trial."
+    "bio": "Longest-serving Israeli PM, currently in his sixth government since December 2022. Defined by the October 7, 2023 Hamas attack and subsequent military operations."
+  },
+  {
+    "slug": "rishi-sunak",
+    "name": "Rishi Sunak",
+    "nameLocal": null,
+    "country": "United Kingdom",
+    "countryCode": "GB",
+    "organization": null,
+    "role": "Former Prime Minister",
+    "languages": ["en"],
+    "bio": "PM of the United Kingdom from October 2022 to July 2024. First British Asian and Hindu to serve as PM."
+  },
+  {
+    "slug": "keir-starmer",
+    "name": "Keir Starmer",
+    "nameLocal": null,
+    "country": "United Kingdom",
+    "countryCode": "GB",
+    "organization": null,
+    "role": "Prime Minister",
+    "languages": ["en"],
+    "bio": "PM of the United Kingdom since July 2024. Former Director of Public Prosecutions. Led Labour to a landslide victory."
+  },
+  {
+    "slug": "justin-trudeau",
+    "name": "Justin Trudeau",
+    "nameLocal": null,
+    "country": "Canada",
+    "countryCode": "CA",
+    "organization": null,
+    "role": "Former Prime Minister",
+    "languages": ["en", "fr"],
+    "bio": "PM of Canada from 2015 to March 2025. Led the Liberal Party through three election victories before stepping down."
+  },
+  {
+    "slug": "mark-carney",
+    "name": "Mark Carney",
+    "nameLocal": null,
+    "country": "Canada",
+    "countryCode": "CA",
+    "organization": null,
+    "role": "Prime Minister",
+    "languages": ["en", "fr"],
+    "bio": "PM of Canada since March 2025. Former Governor of the Bank of Canada and the Bank of England."
+  },
+  {
+    "slug": "anthony-albanese",
+    "name": "Anthony Albanese",
+    "nameLocal": null,
+    "country": "Australia",
+    "countryCode": "AU",
+    "organization": null,
+    "role": "Prime Minister",
+    "languages": ["en"],
+    "bio": "PM of Australia since May 2022. Labor leader focused on climate action and the AUKUS security partnership."
+  },
+  {
+    "slug": "fumio-kishida",
+    "name": "Fumio Kishida",
+    "nameLocal": "\u5cb8\u7530\u6587\u96c4",
+    "country": "Japan",
+    "countryCode": "JP",
+    "organization": null,
+    "role": "Former Prime Minister",
+    "languages": ["ja"],
+    "bio": "PM of Japan from October 2021 to October 2024. Oversaw Japan's historic defense spending increase."
+  },
+  {
+    "slug": "shigeru-ishiba",
+    "name": "Shigeru Ishiba",
+    "nameLocal": "\u77f3\u7834\u8302",
+    "country": "Japan",
+    "countryCode": "JP",
+    "organization": null,
+    "role": "Prime Minister",
+    "languages": ["ja"],
+    "bio": "PM of Japan since October 2024. Former defense minister known for security policy expertise."
+  },
+  {
+    "slug": "olaf-scholz",
+    "name": "Olaf Scholz",
+    "nameLocal": null,
+    "country": "Germany",
+    "countryCode": "DE",
+    "organization": null,
+    "role": "Chancellor",
+    "languages": ["de", "en"],
+    "bio": "Chancellor of Germany since December 2021. Declared a 'Zeitenwende' in German defense policy following Russia's invasion of Ukraine."
+  },
+  {
+    "slug": "giorgia-meloni",
+    "name": "Giorgia Meloni",
+    "nameLocal": null,
+    "country": "Italy",
+    "countryCode": "IT",
+    "organization": null,
+    "role": "Prime Minister",
+    "languages": ["it", "en"],
+    "bio": "PM of Italy since October 2022. First woman to serve as Italian PM. Has taken a firm pro-Ukraine, pro-NATO stance."
+  },
+  {
+    "slug": "pedro-sanchez",
+    "name": "Pedro S\u00e1nchez",
+    "nameLocal": null,
+    "country": "Spain",
+    "countryCode": "ES",
+    "organization": null,
+    "role": "Prime Minister",
+    "languages": ["es", "en", "fr"],
+    "bio": "PM of Spain since 2018. PSOE leader who has governed through coalition politics."
+  },
+  {
+    "slug": "viktor-orban",
+    "name": "Viktor Orb\u00e1n",
+    "nameLocal": null,
+    "country": "Hungary",
+    "countryCode": "HU",
+    "organization": null,
+    "role": "Prime Minister",
+    "languages": ["hu", "en"],
+    "bio": "PM of Hungary since 2010. Has championed 'illiberal democracy' and is often at odds with EU institutions."
+  },
+  {
+    "slug": "donald-tusk",
+    "name": "Donald Tusk",
+    "nameLocal": null,
+    "country": "Poland",
+    "countryCode": "PL",
+    "organization": null,
+    "role": "Prime Minister",
+    "languages": ["pl", "en", "de"],
+    "bio": "PM of Poland since December 2023. Former European Council President who returned to lead a coalition government."
+  },
+  {
+    "slug": "mark-rutte",
+    "name": "Mark Rutte",
+    "nameLocal": null,
+    "country": "Netherlands",
+    "countryCode": "NL",
+    "organization": "NATO",
+    "role": "Secretary General",
+    "languages": ["nl", "en", "de"],
+    "bio": "NATO Secretary General since October 2024. Previously the longest-serving Dutch PM (2010\u20132024)."
+  },
+  {
+    "slug": "kyriakos-mitsotakis",
+    "name": "Kyriakos Mitsotakis",
+    "nameLocal": "\u039a\u03c5\u03c1\u03b9\u03ac\u03ba\u03bf\u03c2 \u039c\u03b7\u03c4\u03c3\u03bf\u03c4\u03ac\u03ba\u03b7\u03c2",
+    "country": "Greece",
+    "countryCode": "GR",
+    "organization": null,
+    "role": "Prime Minister",
+    "languages": ["el", "en", "de", "fr"],
+    "bio": "PM of Greece since 2019. Won re-election in 2023 with a strong majority."
+  },
+  {
+    "slug": "anwar-ibrahim",
+    "name": "Anwar Ibrahim",
+    "nameLocal": null,
+    "country": "Malaysia",
+    "countryCode": "MY",
+    "organization": null,
+    "role": "Prime Minister",
+    "languages": ["ms", "en", "ar"],
+    "bio": "PM of Malaysia since November 2022. Former deputy PM who endured years of imprisonment before his political comeback."
+  },
+  {
+    "slug": "lee-hsien-loong",
+    "name": "Lee Hsien Loong",
+    "nameLocal": "\u674e\u663e\u9f99",
+    "country": "Singapore",
+    "countryCode": "SG",
+    "organization": null,
+    "role": "Former Prime Minister",
+    "languages": ["en", "zh", "ms"],
+    "bio": "PM of Singapore from 2004 to May 2024. Son of founding PM Lee Kuan Yew."
+  },
+  {
+    "slug": "lawrence-wong",
+    "name": "Lawrence Wong",
+    "nameLocal": "\u9ec4\u5faa\u8d22",
+    "country": "Singapore",
+    "countryCode": "SG",
+    "organization": null,
+    "role": "Prime Minister",
+    "languages": ["en", "zh"],
+    "bio": "PM of Singapore since May 2024. Rose to prominence leading COVID-19 response. Represents a generational leadership transition."
+  },
+  {
+    "slug": "christopher-luxon",
+    "name": "Christopher Luxon",
+    "nameLocal": null,
+    "country": "New Zealand",
+    "countryCode": "NZ",
+    "organization": null,
+    "role": "Prime Minister",
+    "languages": ["en"],
+    "bio": "PM of New Zealand since November 2023. Former Air New Zealand CEO."
+  },
+  {
+    "slug": "abiy-ahmed",
+    "name": "Abiy Ahmed",
+    "nameLocal": null,
+    "country": "Ethiopia",
+    "countryCode": "ET",
+    "organization": null,
+    "role": "Prime Minister",
+    "languages": ["am", "om", "en"],
+    "bio": "PM of Ethiopia since 2018. Won the 2019 Nobel Peace Prize for the Eritrea peace deal."
+  },
+  {
+    "slug": "shehbaz-sharif",
+    "name": "Shehbaz Sharif",
+    "nameLocal": null,
+    "country": "Pakistan",
+    "countryCode": "PK",
+    "organization": null,
+    "role": "Prime Minister",
+    "languages": ["ur", "en"],
+    "bio": "PM of Pakistan since March 2024. Brother of former PM Nawaz Sharif. Focused on economic stabilization."
+  },
+  {
+    "slug": "mette-frederiksen",
+    "name": "Mette Frederiksen",
+    "nameLocal": null,
+    "country": "Denmark",
+    "countryCode": "DK",
+    "organization": null,
+    "role": "Prime Minister",
+    "languages": ["da", "en"],
+    "bio": "PM of Denmark since 2019. Prominent voice on Greenland sovereignty and increased defense spending."
+  },
+  {
+    "slug": "antony-blinken",
+    "name": "Antony Blinken",
+    "nameLocal": null,
+    "country": "United States",
+    "countryCode": "US",
+    "organization": "U.S. Department of State",
+    "role": "Former Secretary of State",
+    "languages": ["en", "fr"],
+    "bio": "U.S. Secretary of State from 2021 to January 2025. Led American diplomacy through the Ukraine crisis and Middle East conflicts."
+  },
+  {
+    "slug": "marco-rubio",
+    "name": "Marco Rubio",
+    "nameLocal": null,
+    "country": "United States",
+    "countryCode": "US",
+    "organization": "U.S. Department of State",
+    "role": "Secretary of State",
+    "languages": ["en", "es"],
+    "bio": "U.S. Secretary of State since January 2025. Former Senator from Florida known for hawkish positions on China and Cuba."
+  },
+  {
+    "slug": "sergei-lavrov",
+    "name": "Sergei Lavrov",
+    "nameLocal": "\u0421\u0435\u0440\u0433\u0435\u0439 \u041b\u0430\u0432\u0440\u043e\u0432",
+    "country": "Russia",
+    "countryCode": "RU",
+    "organization": "Ministry of Foreign Affairs",
+    "role": "Foreign Minister",
+    "languages": ["ru", "en", "fr", "si"],
+    "bio": "Foreign Minister of Russia since 2004. One of the longest-serving foreign ministers globally. The public face of Russian diplomatic positions."
+  },
+  {
+    "slug": "wang-yi",
+    "name": "Wang Yi",
+    "nameLocal": "\u738b\u6bc5",
+    "country": "China",
+    "countryCode": "CN",
+    "organization": "Ministry of Foreign Affairs",
+    "role": "Foreign Minister",
+    "languages": ["zh", "ja"],
+    "bio": "Director of the CPC Central Foreign Affairs Commission and Foreign Minister. Brokered the Saudi-Iran rapprochement in 2023."
+  },
+  {
+    "slug": "s-jaishankar",
+    "name": "S. Jaishankar",
+    "nameLocal": null,
+    "country": "India",
+    "countryCode": "IN",
+    "organization": "Ministry of External Affairs",
+    "role": "External Affairs Minister",
+    "languages": ["en", "hi", "ta"],
+    "bio": "External Affairs Minister of India since 2019. Former ambassador to the US and China. Articulate defender of India's multi-alignment policy."
+  },
+  {
+    "slug": "annalena-baerbock",
+    "name": "Annalena Baerbock",
+    "nameLocal": null,
+    "country": "Germany",
+    "countryCode": "DE",
+    "organization": "Federal Foreign Office",
+    "role": "Foreign Minister",
+    "languages": ["de", "en", "fr"],
+    "bio": "Foreign Minister of Germany since 2021. Green Party leader championing 'feminist foreign policy.'"
+  },
+  {
+    "slug": "david-lammy",
+    "name": "David Lammy",
+    "nameLocal": null,
+    "country": "United Kingdom",
+    "countryCode": "GB",
+    "organization": "Foreign, Commonwealth & Development Office",
+    "role": "Foreign Secretary",
+    "languages": ["en"],
+    "bio": "Foreign Secretary of the UK since July 2024. Advocates for 'progressive realism' in foreign policy."
+  },
+  {
+    "slug": "josep-borrell",
+    "name": "Josep Borrell",
+    "nameLocal": null,
+    "country": "Spain",
+    "countryCode": "ES",
+    "organization": "European Union",
+    "role": "Former High Representative for Foreign Affairs",
+    "languages": ["es", "ca", "en", "fr", "it", "pt"],
+    "bio": "EU High Representative for Foreign Affairs from 2019 to 2024. Coordinated EU sanctions on Russia and military aid to Ukraine."
+  },
+  {
+    "slug": "kaja-kallas",
+    "name": "Kaja Kallas",
+    "nameLocal": null,
+    "country": "Estonia",
+    "countryCode": "EE",
+    "organization": "European Union",
+    "role": "High Representative for Foreign Affairs",
+    "languages": ["et", "en", "fi", "fr"],
+    "bio": "EU High Representative since December 2024. Former PM of Estonia and one of Europe's most hawkish voices against Russia."
+  },
+  {
+    "slug": "hakan-fidan",
+    "name": "Hakan Fidan",
+    "nameLocal": null,
+    "country": "Turkey",
+    "countryCode": "TR",
+    "organization": "Ministry of Foreign Affairs",
+    "role": "Foreign Minister",
+    "languages": ["tr", "en"],
+    "bio": "Foreign Minister of Turkey since 2023. Former head of Turkish intelligence (MIT)."
+  },
+  {
+    "slug": "faisal-bin-farhan",
+    "name": "Prince Faisal bin Farhan",
+    "nameLocal": "\u0641\u064a\u0635\u0644 \u0628\u0646 \u0641\u0631\u062d\u0627\u0646",
+    "country": "Saudi Arabia",
+    "countryCode": "SA",
+    "organization": "Ministry of Foreign Affairs",
+    "role": "Foreign Minister",
+    "languages": ["ar", "en"],
+    "bio": "Foreign Minister of Saudi Arabia since 2019. Overseeing diplomatic normalization efforts."
   },
   {
     "slug": "antonio-guterres",
@@ -162,7 +701,128 @@
     "organization": "United Nations",
     "role": "Secretary-General",
     "languages": ["pt", "en", "fr", "es"],
-    "bio": "Secretary-General of the United Nations since January 2017, serving his second term. Previously served as Prime Minister of Portugal from 1995 to 2002 and as United Nations High Commissioner for Refugees from 2005 to 2015. He has focused on climate action, conflict prevention, and reform of the multilateral system."
+    "bio": "UN Secretary-General since 2017. Former PM of Portugal and UNHCR chief. Focused on climate action and conflict prevention."
+  },
+  {
+    "slug": "tedros-adhanom-ghebreyesus",
+    "name": "Tedros Adhanom Ghebreyesus",
+    "nameLocal": null,
+    "country": "Ethiopia",
+    "countryCode": "ET",
+    "organization": "World Health Organization",
+    "role": "Director-General",
+    "languages": ["ti", "am", "en"],
+    "bio": "Director-General of the WHO since 2017. Led the global health response to COVID-19."
+  },
+  {
+    "slug": "ursula-von-der-leyen",
+    "name": "Ursula von der Leyen",
+    "nameLocal": null,
+    "country": "Germany",
+    "countryCode": "DE",
+    "organization": "European Commission",
+    "role": "President",
+    "languages": ["de", "en", "fr"],
+    "bio": "President of the European Commission since 2019, re-elected in 2024. Led the EU response to COVID-19 and the Ukraine crisis."
+  },
+  {
+    "slug": "charles-michel",
+    "name": "Charles Michel",
+    "nameLocal": null,
+    "country": "Belgium",
+    "countryCode": "BE",
+    "organization": "European Council",
+    "role": "Former President",
+    "languages": ["fr", "nl", "en"],
+    "bio": "President of the European Council from 2019 to 2024. Former Belgian PM."
+  },
+  {
+    "slug": "antonio-costa",
+    "name": "Ant\u00f3nio Costa",
+    "nameLocal": null,
+    "country": "Portugal",
+    "countryCode": "PT",
+    "organization": "European Council",
+    "role": "President",
+    "languages": ["pt", "en", "fr", "es"],
+    "bio": "President of the European Council since December 2024. Former PM of Portugal."
+  },
+  {
+    "slug": "roberta-metsola",
+    "name": "Roberta Metsola",
+    "nameLocal": null,
+    "country": "Malta",
+    "countryCode": "MT",
+    "organization": "European Parliament",
+    "role": "President",
+    "languages": ["mt", "en", "it", "fr"],
+    "bio": "President of the European Parliament since 2022. Strong advocate for rule of law and anti-corruption."
+  },
+  {
+    "slug": "jens-stoltenberg",
+    "name": "Jens Stoltenberg",
+    "nameLocal": null,
+    "country": "Norway",
+    "countryCode": "NO",
+    "organization": "NATO",
+    "role": "Former Secretary General",
+    "languages": ["no", "en"],
+    "bio": "NATO Secretary General from 2014 to October 2024. Led NATO through the Ukraine crisis and oversaw Finland and Sweden's accession."
+  },
+  {
+    "slug": "rafael-grossi",
+    "name": "Rafael Grossi",
+    "nameLocal": null,
+    "country": "Argentina",
+    "countryCode": "AR",
+    "organization": "IAEA",
+    "role": "Director General",
+    "languages": ["es", "en", "fr", "it"],
+    "bio": "Director General of the IAEA since 2019. Led nuclear inspections amid Iran tensions and monitored the Zaporizhzhia plant."
+  },
+  {
+    "slug": "moussa-faki-mahamat",
+    "name": "Moussa Faki Mahamat",
+    "nameLocal": null,
+    "country": "Chad",
+    "countryCode": "TD",
+    "organization": "African Union",
+    "role": "Chairperson of the Commission",
+    "languages": ["fr", "ar"],
+    "bio": "Chairperson of the AU Commission since 2017. Former PM and foreign minister of Chad."
+  },
+  {
+    "slug": "haitham-al-ghais",
+    "name": "Haitham al-Ghais",
+    "nameLocal": "\u0647\u064a\u062b\u0645 \u0627\u0644\u063a\u064a\u0635",
+    "country": "Kuwait",
+    "countryCode": "KW",
+    "organization": "OPEC",
+    "role": "Secretary General",
+    "languages": ["ar", "en"],
+    "bio": "Secretary General of OPEC since August 2022. Managed OPEC+ production cuts amid volatile energy markets."
+  },
+  {
+    "slug": "fatih-birol",
+    "name": "Fatih Birol",
+    "nameLocal": null,
+    "country": "Turkey",
+    "countryCode": "TR",
+    "organization": "International Energy Agency",
+    "role": "Executive Director",
+    "languages": ["tr", "en"],
+    "bio": "Executive Director of the IEA since 2015. One of the most influential voices on global energy transitions."
+  },
+  {
+    "slug": "dilma-rousseff",
+    "name": "Dilma Rousseff",
+    "nameLocal": null,
+    "country": "Brazil",
+    "countryCode": "BR",
+    "organization": "New Development Bank (BRICS)",
+    "role": "President",
+    "languages": ["pt", "fr", "es"],
+    "bio": "President of the BRICS New Development Bank since 2023. Former President of Brazil (2011\u20132016)."
   },
   {
     "slug": "jerome-powell",
@@ -173,7 +833,7 @@
     "organization": "Federal Reserve",
     "role": "Chair",
     "languages": ["en"],
-    "bio": "Chair of the Federal Reserve since February 2018, appointed by President Trump and reappointed by President Biden. A lawyer and former investment banker, he joined the Fed's Board of Governors in 2012. He has navigated the central bank through the COVID-19 economic crisis, the subsequent surge in inflation, and the most aggressive interest rate hiking cycle in four decades."
+    "bio": "Chair of the Federal Reserve since 2018. Navigated the most aggressive rate-hiking cycle in four decades."
   },
   {
     "slug": "christine-lagarde",
@@ -184,40 +844,7 @@
     "organization": "European Central Bank",
     "role": "President",
     "languages": ["fr", "en"],
-    "bio": "President of the European Central Bank since November 2019, the first woman to hold the position. Previously served as Managing Director of the International Monetary Fund from 2011 to 2019 and as France's Minister of Finance. She has steered eurozone monetary policy through the pandemic and the subsequent energy and inflation crisis."
-  },
-  {
-    "slug": "kristalina-georgieva",
-    "name": "Kristalina Georgieva",
-    "nameLocal": "\u041a\u0440\u0438\u0441\u0442\u0430\u043b\u0438\u043d\u0430 \u0413\u0435\u043e\u0440\u0433\u0438\u0435\u0432\u0430",
-    "country": "Bulgaria",
-    "countryCode": "BG",
-    "organization": "International Monetary Fund",
-    "role": "Managing Director",
-    "languages": ["bg", "en", "fr", "ru"],
-    "bio": "Managing Director of the International Monetary Fund since October 2019, the first person from an emerging market economy to lead the institution. Previously served as CEO of the World Bank and as European Commissioner for Budget and Human Resources. She has overseen the IMF's response to the pandemic, global debt challenges, and the economic fallout from geopolitical fragmentation."
-  },
-  {
-    "slug": "ngozi-okonjo-iweala",
-    "name": "Ngozi Okonjo-Iweala",
-    "nameLocal": null,
-    "country": "Nigeria",
-    "countryCode": "NG",
-    "organization": "World Trade Organization",
-    "role": "Director-General",
-    "languages": ["en", "ig", "fr"],
-    "bio": "Director-General of the World Trade Organization since March 2021, the first woman and first African to lead the organization. Previously served twice as Nigeria's Finance Minister and spent 25 years at the World Bank, rising to Managing Director. She has worked to revitalize the WTO's negotiating function and address issues including pandemic preparedness and fisheries subsidies."
-  },
-  {
-    "slug": "yi-gang",
-    "name": "Yi Gang",
-    "nameLocal": "\u6613\u7eb2",
-    "country": "China",
-    "countryCode": "CN",
-    "organization": "People's Bank of China",
-    "role": "Former Governor",
-    "languages": ["zh", "en"],
-    "bio": "Governor of the People's Bank of China from 2018 to 2023, overseeing Chinese monetary policy during a period of significant economic transition. An economist educated at the University of Illinois, he previously taught at Indiana University before returning to China to join the PBOC. He managed the delicate balance of supporting economic growth while controlling financial risks during the pandemic and the property sector crisis."
+    "bio": "President of the ECB since 2019. Former IMF Managing Director. Steered eurozone policy through inflation and energy crises."
   },
   {
     "slug": "andrew-bailey",
@@ -228,29 +855,29 @@
     "organization": "Bank of England",
     "role": "Governor",
     "languages": ["en"],
-    "bio": "Governor of the Bank of England since March 2020, taking office just as the COVID-19 pandemic struck. Previously served as Chief Executive of the Financial Conduct Authority and spent three decades at the Bank of England in various roles. He has navigated British monetary policy through the pandemic, the energy price shock, and the gilt market crisis following the 2022 mini-budget."
+    "bio": "Governor of the Bank of England since 2020. Navigated British monetary policy through the pandemic and the 2022 gilt crisis."
   },
   {
-    "slug": "janet-yellen",
-    "name": "Janet Yellen",
-    "nameLocal": null,
-    "country": "United States",
-    "countryCode": "US",
-    "organization": "U.S. Department of the Treasury",
-    "role": "Former Secretary of the Treasury",
-    "languages": ["en"],
-    "bio": "United States Secretary of the Treasury from January 2021 to January 2025, the first woman to hold the position. Previously served as Chair of the Federal Reserve from 2014 to 2018, also the first woman in that role. A labor economist by training, she managed Treasury policy through pandemic recovery, inflation challenges, and the implementation of major fiscal legislation."
+    "slug": "kazuo-ueda",
+    "name": "Kazuo Ueda",
+    "nameLocal": "\u690d\u7530\u548c\u7537",
+    "country": "Japan",
+    "countryCode": "JP",
+    "organization": "Bank of Japan",
+    "role": "Governor",
+    "languages": ["ja", "en"],
+    "bio": "Governor of the Bank of Japan since April 2023. Ended the BOJ's negative interest rate policy and yield curve control."
   },
   {
-    "slug": "nirmala-sitharaman",
-    "name": "Nirmala Sitharaman",
-    "nameLocal": "\u0ca8\u0cbf\u0cb0\u0ccd\u0cae\u0cb2\u0cbe \u0cb8\u0cc0\u0ca4\u0cbe\u0cb0\u0cbe\u0cae\u0ca8\u0ccd",
-    "country": "India",
-    "countryCode": "IN",
-    "organization": "Ministry of Finance, India",
-    "role": "Minister of Finance",
-    "languages": ["en", "hi", "ta", "kn"],
-    "bio": "Minister of Finance and Corporate Affairs of India since 2019, the first full-time female finance minister of the country. Previously served as Minister of Defence from 2017 to 2019 and as Minister of Commerce and Industry. She has presented multiple Union Budgets focused on infrastructure investment, digital economy expansion, and fiscal consolidation."
+    "slug": "kristalina-georgieva",
+    "name": "Kristalina Georgieva",
+    "nameLocal": "\u041a\u0440\u0438\u0441\u0442\u0430\u043b\u0438\u043d\u0430 \u0413\u0435\u043e\u0440\u0433\u0438\u0435\u0432\u0430",
+    "country": "Bulgaria",
+    "countryCode": "BG",
+    "organization": "International Monetary Fund",
+    "role": "Managing Director",
+    "languages": ["bg", "en", "fr", "ru"],
+    "bio": "IMF Managing Director since 2019. First person from an emerging market to lead the institution."
   },
   {
     "slug": "ajay-banga",
@@ -261,6 +888,248 @@
     "organization": "World Bank Group",
     "role": "President",
     "languages": ["en", "hi"],
-    "bio": "President of the World Bank Group since June 2023, nominated by President Biden. Previously served as Executive Chairman and CEO of Mastercard from 2010 to 2021, where he led the company's expansion into digital payments across emerging markets. He has focused on reforming the World Bank to address climate change alongside poverty reduction and to mobilize greater private sector investment."
+    "bio": "World Bank President since June 2023. Former Mastercard CEO focused on climate and poverty."
+  },
+  {
+    "slug": "ngozi-okonjo-iweala",
+    "name": "Ngozi Okonjo-Iweala",
+    "nameLocal": null,
+    "country": "Nigeria",
+    "countryCode": "NG",
+    "organization": "World Trade Organization",
+    "role": "Director-General",
+    "languages": ["en", "ig", "fr"],
+    "bio": "WTO Director-General since 2021. First woman and first African to lead the organization."
+  },
+  {
+    "slug": "janet-yellen",
+    "name": "Janet Yellen",
+    "nameLocal": null,
+    "country": "United States",
+    "countryCode": "US",
+    "organization": "U.S. Department of the Treasury",
+    "role": "Former Secretary of the Treasury",
+    "languages": ["en"],
+    "bio": "U.S. Treasury Secretary from 2021 to 2025. Previously the first woman to chair the Federal Reserve (2014\u20132018)."
+  },
+  {
+    "slug": "scott-bessent",
+    "name": "Scott Bessent",
+    "nameLocal": null,
+    "country": "United States",
+    "countryCode": "US",
+    "organization": "U.S. Department of the Treasury",
+    "role": "Secretary of the Treasury",
+    "languages": ["en"],
+    "bio": "U.S. Treasury Secretary since January 2025. Former hedge fund manager and architect of Trump's economic policy."
+  },
+  {
+    "slug": "nirmala-sitharaman",
+    "name": "Nirmala Sitharaman",
+    "nameLocal": "\u0ca8\u0cbf\u0cb0\u0ccd\u0cae\u0cb2\u0cbe \u0cb8\u0cc0\u0ca4\u0cbe\u0cb0\u0cbe\u0cae\u0ca8\u0ccd",
+    "country": "India",
+    "countryCode": "IN",
+    "organization": "Ministry of Finance, India",
+    "role": "Minister of Finance",
+    "languages": ["en", "hi", "ta", "kn"],
+    "bio": "Finance Minister of India since 2019, the first full-time female finance minister."
+  },
+  {
+    "slug": "yi-gang",
+    "name": "Yi Gang",
+    "nameLocal": "\u6613\u7eb2",
+    "country": "China",
+    "countryCode": "CN",
+    "organization": "People's Bank of China",
+    "role": "Former Governor",
+    "languages": ["zh", "en"],
+    "bio": "Governor of the PBOC from 2018 to 2023. Managed monetary policy during economic transition."
+  },
+  {
+    "slug": "lloyd-austin",
+    "name": "Lloyd Austin",
+    "nameLocal": null,
+    "country": "United States",
+    "countryCode": "US",
+    "organization": "U.S. Department of Defense",
+    "role": "Former Secretary of Defense",
+    "languages": ["en"],
+    "bio": "U.S. Secretary of Defense from 2021 to January 2025. First African American to hold the position. Retired four-star Army general."
+  },
+  {
+    "slug": "pete-hegseth",
+    "name": "Pete Hegseth",
+    "nameLocal": null,
+    "country": "United States",
+    "countryCode": "US",
+    "organization": "U.S. Department of Defense",
+    "role": "Secretary of Defense",
+    "languages": ["en"],
+    "bio": "U.S. Secretary of Defense since January 2025. Former Fox News host and Army National Guard officer."
+  },
+  {
+    "slug": "sergei-shoigu",
+    "name": "Sergei Shoigu",
+    "nameLocal": "\u0421\u0435\u0440\u0433\u0435\u0439 \u0428\u043e\u0439\u0433\u0443",
+    "country": "Russia",
+    "countryCode": "RU",
+    "organization": "Security Council of Russia",
+    "role": "Secretary of the Security Council",
+    "languages": ["ru"],
+    "bio": "Secretary of Russia's Security Council since May 2024. Served as Defence Minister from 2012 to 2024."
+  },
+  {
+    "slug": "andrei-belousov",
+    "name": "Andrei Belousov",
+    "nameLocal": "\u0410\u043d\u0434\u0440\u0435\u0439 \u0411\u0435\u043b\u043e\u0443\u0441\u043e\u0432",
+    "country": "Russia",
+    "countryCode": "RU",
+    "organization": "Ministry of Defence",
+    "role": "Defence Minister",
+    "languages": ["ru"],
+    "bio": "Defence Minister of Russia since May 2024. Economist whose appointment signaled focus on defense industry efficiency."
+  },
+  {
+    "slug": "valerii-zaluzhnyi",
+    "name": "Valerii Zaluzhnyi",
+    "nameLocal": "\u0412\u0430\u043b\u0435\u0440\u0456\u0439 \u0417\u0430\u043b\u0443\u0436\u043d\u0438\u0439",
+    "country": "Ukraine",
+    "countryCode": "UA",
+    "organization": null,
+    "role": "Former Commander-in-Chief / Ambassador to UK",
+    "languages": ["uk"],
+    "bio": "Commander-in-Chief of Ukraine's Armed Forces from 2021 to February 2024. Led defense during the first two years of the full-scale invasion."
+  },
+  {
+    "slug": "oleksandr-syrskyi",
+    "name": "Oleksandr Syrskyi",
+    "nameLocal": "\u041e\u043b\u0435\u043a\u0441\u0430\u043d\u0434\u0440 \u0421\u0438\u0440\u0441\u044c\u043a\u0438\u0439",
+    "country": "Ukraine",
+    "countryCode": "UA",
+    "organization": null,
+    "role": "Commander-in-Chief",
+    "languages": ["uk", "ru"],
+    "bio": "Commander-in-Chief of Ukraine's Armed Forces since February 2024. Led the defense of Kyiv and the Kharkiv counteroffensive."
+  },
+  {
+    "slug": "yoav-gallant",
+    "name": "Yoav Gallant",
+    "nameLocal": "\u05d9\u05d5\u05d0\u05d1 \u05d2\u05dc\u05e0\u05d8",
+    "country": "Israel",
+    "countryCode": "IL",
+    "organization": null,
+    "role": "Former Defense Minister",
+    "languages": ["he", "en"],
+    "bio": "Defense Minister of Israel from 2022 to November 2024. Oversaw military operations in Gaza following October 7."
+  },
+  {
+    "slug": "sebastien-lecornu",
+    "name": "S\u00e9bastien Lecornu",
+    "nameLocal": null,
+    "country": "France",
+    "countryCode": "FR",
+    "organization": "Ministry of the Armed Forces",
+    "role": "Minister of the Armed Forces",
+    "languages": ["fr"],
+    "bio": "French Minister of the Armed Forces since 2022. Overseeing France's military support to Ukraine."
+  },
+  {
+    "slug": "rajnath-singh",
+    "name": "Rajnath Singh",
+    "nameLocal": "\u0930\u093e\u091c\u0928\u093e\u0925 \u0938\u093f\u0902\u0939",
+    "country": "India",
+    "countryCode": "IN",
+    "organization": "Ministry of Defence",
+    "role": "Defence Minister",
+    "languages": ["hi", "en"],
+    "bio": "Defence Minister of India since 2019. Overseeing defense modernization and the China border standoff."
+  },
+  {
+    "slug": "boris-pistorius",
+    "name": "Boris Pistorius",
+    "nameLocal": null,
+    "country": "Germany",
+    "countryCode": "DE",
+    "organization": "Federal Ministry of Defence",
+    "role": "Defence Minister",
+    "languages": ["de", "en"],
+    "bio": "German Defence Minister since January 2023. Pushing for Germany's 'Zeitenwende' in defense readiness."
+  },
+  {
+    "slug": "mahmoud-abbas",
+    "name": "Mahmoud Abbas",
+    "nameLocal": "\u0645\u062d\u0645\u0648\u062f \u0639\u0628\u0627\u0633",
+    "country": "Palestine",
+    "countryCode": "PS",
+    "organization": "Palestinian Authority",
+    "role": "President",
+    "languages": ["ar"],
+    "bio": "President of the Palestinian Authority since 2005. Has pursued diplomatic recognition through international institutions."
+  },
+  {
+    "slug": "ismail-haniyeh",
+    "name": "Ismail Haniyeh",
+    "nameLocal": "\u0625\u0633\u0645\u0627\u0639\u064a\u0644 \u0647\u0646\u064a\u0629",
+    "country": "Palestine",
+    "countryCode": "PS",
+    "organization": "Hamas",
+    "role": "Former Political Bureau Chief (deceased)",
+    "languages": ["ar"],
+    "bio": "Head of Hamas's political bureau from 2017 until his assassination in Tehran in July 2024."
+  },
+  {
+    "slug": "hassan-nasrallah",
+    "name": "Hassan Nasrallah",
+    "nameLocal": "\u062d\u0633\u0646 \u0646\u0635\u0631 \u0627\u0644\u0644\u0647",
+    "country": "Lebanon",
+    "countryCode": "LB",
+    "organization": "Hezbollah",
+    "role": "Former Secretary-General (deceased)",
+    "languages": ["ar"],
+    "bio": "Secretary-General of Hezbollah from 1992 until his killing in an Israeli airstrike in September 2024."
+  },
+  {
+    "slug": "abdul-malik-al-houthi",
+    "name": "Abdul-Malik al-Houthi",
+    "nameLocal": "\u0639\u0628\u062f \u0627\u0644\u0645\u0644\u0643 \u0627\u0644\u062d\u0648\u062b\u064a",
+    "country": "Yemen",
+    "countryCode": "YE",
+    "organization": "Ansar Allah (Houthis)",
+    "role": "Leader",
+    "languages": ["ar"],
+    "bio": "Leader of the Houthi movement since 2004. Launched Red Sea shipping attacks in late 2023 in solidarity with Gaza."
+  },
+  {
+    "slug": "lai-ching-te",
+    "name": "Lai Ching-te",
+    "nameLocal": "\u8cf4\u6e05\u5fb7",
+    "country": "Taiwan",
+    "countryCode": "TW",
+    "organization": null,
+    "role": "President",
+    "languages": ["zh", "nan"],
+    "bio": "President of Taiwan since May 2024. DPP leader whose election China characterized as a 'dangerous choice.'"
+  },
+  {
+    "slug": "tsai-ing-wen",
+    "name": "Tsai Ing-wen",
+    "nameLocal": "\u8521\u82f1\u6587",
+    "country": "Taiwan",
+    "countryCode": "TW",
+    "organization": null,
+    "role": "Former President",
+    "languages": ["zh", "en"],
+    "bio": "President of Taiwan from 2016 to May 2024. First female president. Deepened ties with democratic allies."
+  },
+  {
+    "slug": "pope-francis",
+    "name": "Pope Francis",
+    "nameLocal": null,
+    "country": "Vatican City",
+    "countryCode": "VA",
+    "organization": "Catholic Church",
+    "role": "Pope",
+    "languages": ["es", "it", "de", "fr", "pt", "en", "la"],
+    "bio": "Head of the Catholic Church since 2013. First pope from the Americas. Focused on social justice, climate change, and interfaith dialogue."
   }
 ]

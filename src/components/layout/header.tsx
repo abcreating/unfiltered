@@ -4,6 +4,7 @@ const navLinks = [
   { href: "/speeches", label: "Speeches" },
   { href: "/leaders", label: "Leaders" },
   { href: "/find", label: "Find the Clip" },
+  { href: "/pricing", label: "Pro" },
   { href: "/about", label: "About" },
 ];
 

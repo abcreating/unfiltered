@@ -19,9 +19,9 @@ export async function GET(request: NextRequest) {
     const where = {
       status: "PUBLISHED" as const,
       OR: [
-        { title: { contains: q } },
-        { titleOriginal: { contains: q } },
-        { occasion: { contains: q } },
+        { title: { contains: q, mode: "insensitive" as const } },
+        { titleOriginal: { contains: q, mode: "insensitive" as const } },
+        { occasion: { contains: q, mode: "insensitive" as const } },
       ],
     };
 

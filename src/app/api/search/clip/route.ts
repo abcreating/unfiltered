@@ -25,7 +25,7 @@ export async function POST(request: NextRequest) {
     // Find matching paragraphs in published speeches
     const matchingParagraphs = await prisma.paragraph.findMany({
       where: {
-        text: { contains: query },
+        text: { contains: query, mode: "insensitive" as const },
         speech: { status: "PUBLISHED" },
       },
       include: {
@@ -56,7 +56,7 @@ export async function POST(request: NextRequest) {
     // Get total count for pagination
     const total = await prisma.paragraph.count({
       where: {
-        text: { contains: query },
+        text: { contains: query, mode: "insensitive" as const },
         speech: { status: "PUBLISHED" },
       },
     });

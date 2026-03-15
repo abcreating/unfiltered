@@ -50,26 +50,38 @@ model VerificationToken {
 }
 
 model User {
-  id            String    @id @default(cuid())
-  name          String?
-  email         String?   @unique
-  emailVerified DateTime?
-  image         String?
-  passwordHash  String?
-  role          UserRole  @default(USER)
-  createdAt     DateTime  @default(now())
-  updatedAt     DateTime  @updatedAt
+  id                   String             @id @default(cuid())
+  name                 String?
+  email                String?            @unique
+  emailVerified        DateTime?
+  image                String?
+  passwordHash         String?
+  role                 UserRole           @default(USER)
+  stripeCustomerId     String?            @unique
+  stripeSubscriptionId String?
+  subscriptionStatus   SubscriptionStatus @default(FREE)
+  subscriptionEnd      DateTime?
+  createdAt            DateTime           @default(now())
+  updatedAt            DateTime           @updatedAt
 
-  accounts  Account[]
-  sessions  Session[]
-  alerts    Alert[]
-  bookmarks Bookmark[]
+  accounts    Account[]
+  sessions    Session[]
+  alerts      Alert[]
+  bookmarks   Bookmark[]
+  speechViews SpeechView[]
 }
 
 enum UserRole {
   USER
   EDITOR
   ADMIN
+}
+
+enum SubscriptionStatus {
+  FREE
+  ACTIVE
+  PAST_DUE
+  CANCELED
 }
 
 // ─── LEADERS ─────────────────────────────────────────────────
@@ -130,6 +142,7 @@ model Speech {
   bookmarks    Bookmark[]
   mediaReports MediaReport[]
   aiContext    AiContext?
+  speechViews  SpeechView[]
 
   @@index([leaderId])
   @@index([deliveredAt])
@@ -310,6 +323,21 @@ model Bookmark {
   @@unique([userId, speechId])
   @@index([userId])
   @@index([speechId])
+}
+
+// ─── SPEECH VIEWS (paywall tracking) ────────────────────────
+
+model SpeechView {
+  id       String   @id @default(cuid())
+  userId   String
+  speechId String
+  viewedAt DateTime @default(now())
+
+  user   User   @relation(fields: [userId], references: [id], onDelete: Cascade)
+  speech Speech @relation(fields: [speechId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, speechId])
+  @@index([userId])
 }
 
 // ─── INGESTION LOG ───────────────────────────────────────────
