@@ -1,12 +1,14 @@
 import prisma from "./prisma";
 import { TranslationProvider } from "@/generated/prisma";
 
+const LIBRETRANSLATE_URL = process.env.LIBRETRANSLATE_URL || "https://libretranslate.com";
+
 export const SUPPORTED_LANGUAGES = [
   { code: "en", name: "English" },
   { code: "es", name: "Spanish" },
   { code: "fr", name: "French" },
   { code: "ar", name: "Arabic" },
-  { code: "zh", name: "Chinese (Simplified)" },
+  { code: "zh", name: "Chinese" },
   { code: "hi", name: "Hindi" },
   { code: "ru", name: "Russian" },
   { code: "pt", name: "Portuguese" },
@@ -15,38 +17,33 @@ export const SUPPORTED_LANGUAGES = [
   { code: "de", name: "German" },
   { code: "it", name: "Italian" },
   { code: "tr", name: "Turkish" },
-  { code: "ur", name: "Urdu" },
-  { code: "fa", name: "Farsi" },
-  { code: "he", name: "Hebrew" },
-  { code: "sw", name: "Swahili" },
   { code: "id", name: "Indonesian" },
-  { code: "th", name: "Thai" },
   { code: "vi", name: "Vietnamese" },
   { code: "pl", name: "Polish" },
   { code: "uk", name: "Ukrainian" },
   { code: "nl", name: "Dutch" },
-  { code: "ms", name: "Malay" },
+  { code: "fi", name: "Finnish" },
+  { code: "cs", name: "Czech" },
+  { code: "da", name: "Danish" },
+  { code: "el", name: "Greek" },
+  { code: "hu", name: "Hungarian" },
+  { code: "sv", name: "Swedish" },
 ];
 
-async function translateText(text: string, targetLang: string): Promise<string> {
-  const apiKey = process.env.GOOGLE_TRANSLATE_API_KEY;
+async function translateText(text: string, sourceLang: string, targetLang: string): Promise<string> {
+  const apiKey = process.env.LIBRETRANSLATE_API_KEY || "";
 
-  if (!apiKey) {
-    throw new Error("GOOGLE_TRANSLATE_API_KEY is not configured");
-  }
-
-  const response = await fetch(
-    `https://translation.googleapis.com/language/translate/v2?key=${apiKey}`,
-    {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        q: text,
-        target: targetLang,
-        format: "text",
-      }),
-    }
-  );
+  const response = await fetch(`${LIBRETRANSLATE_URL}/translate`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({
+      q: text,
+      source: sourceLang,
+      target: targetLang,
+      format: "text",
+      ...(apiKey ? { api_key: apiKey } : {}),
+    }),
+  });
 
   if (!response.ok) {
     const error = await response.text();
@@ -54,7 +51,7 @@ async function translateText(text: string, targetLang: string): Promise<string> 
   }
 
   const data = await response.json();
-  return data.data.translations[0].translatedText;
+  return data.translatedText;
 }
 
 export async function translateSpeech(
@@ -102,14 +99,16 @@ export async function translateSpeech(
     throw new Error("Speech not found");
   }
 
+  const sourceLang = speech.originalLang || "en";
+
   // Translate title
-  const translatedTitle = await translateText(speech.title, targetLang);
+  const translatedTitle = await translateText(speech.title, sourceLang, targetLang);
 
   // Translate each paragraph
   const translatedParagraphs: { paragraphId: string; text: string }[] = [];
 
   for (const paragraph of speech.paragraphs) {
-    const translatedText = await translateText(paragraph.text, targetLang);
+    const translatedText = await translateText(paragraph.text, sourceLang, targetLang);
     translatedParagraphs.push({
       paragraphId: paragraph.id,
       text: translatedText,
@@ -122,7 +121,7 @@ export async function translateSpeech(
       speechId,
       lang: targetLang,
       title: translatedTitle,
-      provider: TranslationProvider.GOOGLE,
+      provider: TranslationProvider.GOOGLE, // reusing enum, means "machine translated"
       paragraphs: {
         create: translatedParagraphs.map((tp) => ({
           paragraphId: tp.paragraphId,
