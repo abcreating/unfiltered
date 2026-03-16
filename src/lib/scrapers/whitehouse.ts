@@ -53,6 +53,13 @@ export const whitehouseScraper: ScraperSource = {
       $('meta[property="article:published_time"]').attr("content") ||
       $("time").first().attr("datetime");
 
+    let occasion = "White House Remarks";
+    if (url.includes("/press-conferences/") || url.includes("press-conference")) {
+      occasion = "Press Conference";
+    } else if (url.includes("/press-briefings/") || url.includes("press-briefing")) {
+      occasion = "Press Briefing";
+    }
+
     return {
       title,
       leaderSlug: "donald-trump",
@@ -62,7 +69,7 @@ export const whitehouseScraper: ScraperSource = {
       country: "United States",
       countryCode: "US",
       originalLang: "en",
-      occasion: "White House Remarks",
+      occasion,
     };
   },
 
@@ -90,7 +97,10 @@ export const whitehouseScraper: ScraperSource = {
             const loc = $(el).text().trim();
             if (
               loc.includes("/remarks/") ||
-              (loc.includes("/briefings-statements/") && loc.includes("remarks"))
+              loc.includes("/press-conferences/") ||
+              loc.includes("/press-briefings/") ||
+              (loc.includes("/briefings-statements/") &&
+                (loc.includes("remarks") || loc.includes("press-conference") || loc.includes("press-briefing")))
             ) {
               if (!urls.includes(loc)) {
                 urls.push(loc);

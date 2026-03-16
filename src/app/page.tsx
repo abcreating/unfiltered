@@ -37,8 +37,8 @@ export default async function Home() {
             What leaders actually said.
           </p>
           <p className="text-base leading-[1.8] text-foreground/80 max-w-xl">
-            Full transcripts of speeches by world leaders, in any language, with
-            zero editorial framing. {totalSpeeches} speeches from{" "}
+            Full transcripts of speeches and press conferences by world leaders,
+            in any language, with zero editorial framing. {totalSpeeches} transcripts from{" "}
             {totalLeaders} leaders and counting.
           </p>
 

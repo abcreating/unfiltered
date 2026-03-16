@@ -53,6 +53,16 @@ export const govUkScraper: ScraperSource = {
       $('meta[name="govuk:first-published-at"]').attr("content") ||
       $("time").first().attr("datetime");
 
+    // Detect occasion type from page metadata
+    let occasion: string | undefined;
+    const docType = $('meta[name="govuk:document-type"]').attr("content") || "";
+    const titleLower = title.toLowerCase();
+    if (docType === "press_conference" || titleLower.includes("press conference")) {
+      occasion = "Press Conference";
+    } else if (titleLower.includes("oral statement") || docType === "oral_statement") {
+      occasion = "Oral Statement";
+    }
+
     return {
       title,
       leaderSlug,
@@ -62,29 +72,39 @@ export const govUkScraper: ScraperSource = {
       country: "United Kingdom",
       countryCode: "GB",
       originalLang: "en",
+      occasion,
     };
   },
 
   async discover(): Promise<string[]> {
     try {
-      // Use gov.uk search API for reliable results
-      const response = await fetch(
-        "https://www.gov.uk/api/search.json?filter_content_store_document_type=speech&order=-public_timestamp&count=20",
-        {
-          headers: { "User-Agent": UA },
-        }
-      );
-      if (!response.ok) return [];
-
-      const data = await response.json();
       const urls: string[] = [];
 
-      if (data.results) {
-        for (const result of data.results) {
-          if (result.link) {
-            const fullUrl = `https://www.gov.uk${result.link}`;
-            urls.push(fullUrl);
+      // Fetch both speeches and press conferences
+      const docTypes = ["speech", "press_conference", "oral_statement"];
+      for (const docType of docTypes) {
+        try {
+          const response = await fetch(
+            `https://www.gov.uk/api/search.json?filter_content_store_document_type=${docType}&order=-public_timestamp&count=10`,
+            {
+              headers: { "User-Agent": UA },
+            }
+          );
+          if (!response.ok) continue;
+
+          const data = await response.json();
+          if (data.results) {
+            for (const result of data.results) {
+              if (result.link) {
+                const fullUrl = `https://www.gov.uk${result.link}`;
+                if (!urls.includes(fullUrl)) {
+                  urls.push(fullUrl);
+                }
+              }
+            }
           }
+        } catch {
+          continue;
         }
       }
 

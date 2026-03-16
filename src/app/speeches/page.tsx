@@ -71,10 +71,10 @@ export default async function SpeechesPage() {
       <main className="flex-1">
         <section className="max-w-3xl mx-auto px-6 pt-16 pb-20">
           <h1 className="heading-serif text-3xl sm:text-4xl text-foreground mb-2">
-            Speech Archive
+            Transcript Archive
           </h1>
           <p className="text-sm text-muted-foreground mb-10">
-            Full transcripts of speeches by world leaders, sorted by date.
+            Full transcripts of speeches, press conferences, and briefings by world leaders.
           </p>
 
           <SpeechListFilter
